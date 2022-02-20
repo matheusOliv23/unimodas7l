@@ -6,7 +6,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     ::-webkit-scrollbar {
       width: 8px;
       height: 5px;
@@ -19,9 +19,13 @@ export default createGlobalStyle`
       background: ${({ theme }) => lighten(0.4, theme.primary)};
     }
   }
-  body {
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+  body {    
     background: ${(props) => props.theme.background};
-    font: 400 1rem 'Montserrat', sans-serif;
+    font: 400 1rem 'Roboto', sans-serif;
   }
   img {
     width: 100%;
