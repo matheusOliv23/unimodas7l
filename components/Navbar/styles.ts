@@ -12,6 +12,8 @@ export const Container = styled.nav`
   justify-content: space-around;
   height: 4rem;
   padding: 1rem;
+  position: fixed;
+  z-index: 3;
 
   border-bottom: 1px solid ${({ theme }) => theme.border};
 

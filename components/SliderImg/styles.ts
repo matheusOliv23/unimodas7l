@@ -8,12 +8,21 @@ interface ImgProps {
   imgUrl?: string;
 }
 
+interface WrapperProps {
+  sliderIndex: number;
+}
+
+interface SlideProps {
+  bgColor: string;
+}
+
 export const Container = styled.section`
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   position: relative;
   background: #fff;
+  overflow: hidden;
 `;
 
 export const Arrow = styled.div<DirectionProps>`
@@ -35,16 +44,19 @@ export const Arrow = styled.div<DirectionProps>`
   left: ${(props) => props.direction === "left" && "20px"};
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<WrapperProps>`
   height: 100%;
-  width: 100%;
+  transform: translateX(${(props) => props.sliderIndex * -100}vw);
+  display: flex;
+  transition: all 1.5s ease;
 `;
 
-export const Slider = styled.div`
+export const Slider = styled.div<SlideProps>`
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
+  background: ${(props) => props.bgColor};
 `;
 
 export const ImgContainer = styled.div`
@@ -67,5 +79,12 @@ export const Titulo = styled.h1`
 `;
 export const Descricao = styled.p`
   margin: 3rem 0rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 3px;
 `;
-export const Button = styled.button``;
+export const Button = styled.button`
+  padding: 0.8rem;
+  background: transparent;
+  font-size: 1.5rem;
+`;
