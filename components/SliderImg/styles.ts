@@ -13,7 +13,7 @@ interface WrapperProps {
 }
 
 interface SlideProps {
-  bgColor: string;
+  bgColor?: string;
 }
 
 export const Container = styled.section`

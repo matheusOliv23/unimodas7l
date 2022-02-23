@@ -11,12 +11,22 @@ import {
   Button,
 } from "./styles";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import picture from "../assets/model.jpeg";
 import { useState } from "react";
-import { sliderItems } from "./data";
 
-function SliderImg() {
+interface ISlider {
+  titulo: string;
+  descricao: string;
+  img: string;
+}
+
+interface SliderProps {
+  sliders: ISlider[];
+}
+
+function SliderImg({ sliders }: SliderProps) {
   const [slideIndex, setSlideIndex] = useState(0);
+
+  console.log(sliders);
 
   function handleClick(direction: string) {
     if (direction === "left") {
@@ -32,8 +42,8 @@ function SliderImg() {
         <AiOutlineArrowLeft />
       </Arrow>
       <Wrapper sliderIndex={slideIndex}>
-        {sliderItems.map((item) => (
-          <Slider key={item.id} bgColor={item.bgColor}>
+        {sliders.map((item, index) => (
+          <Slider key={index}>
             <ImgContainer>
               {/* <Image
             layout="responsive"
