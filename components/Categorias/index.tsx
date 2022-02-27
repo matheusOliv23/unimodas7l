@@ -1,11 +1,22 @@
-import { Container } from "./styles";
+import { Container, ContainerCategoria } from "./styles";
+import CategoriaItem from "./CategoriaItem";
 
-function Categorias() {
+interface ICategorias {
+  titulo: string;
+  img: string;
+}
+
+interface CategoriasProp {
+  categorias: ICategorias[];
+}
+
+export default function Categorias({ categorias }: CategoriasProp) {
+  console.log(categorias);
   return (
     <Container>
-      <h1>Categorias</h1>
+      {categorias.map((item, index) => (
+        <CategoriaItem key={index} item={item} />
+      ))}
     </Container>
   );
 }
-
-export default Categorias;
