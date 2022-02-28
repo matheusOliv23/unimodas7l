@@ -2,11 +2,17 @@ import styled from 'styled-components';
 
 
 export const Container = styled.section`
-  display: flex;
   padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+`;
+
+export const ContainerImagens = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
 `;
 export const ContainerCategoria = styled.div`
   flex: 1;

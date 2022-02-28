@@ -5,6 +5,7 @@ import Categorias from "../components/Categorias/index";
 import SliderImg from "../components/SliderImg";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
+import Lancamentos from "../components/Lancamentos";
 
 interface ISlider {
   titulo: string;
@@ -23,7 +24,6 @@ interface ComponentesProps {
 }
 
 export default function Home({ sliders, categorias }: ComponentesProps) {
-  console.log(categorias);
   return (
     <div>
       <Head>
@@ -35,6 +35,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <Navbar />
       <SliderImg sliders={sliders} />
       <Categorias categorias={categorias} />
+      <Lancamentos />
       <main className="container"></main>
     </div>
   );
@@ -65,7 +66,7 @@ export const getStaticProps: GetStaticProps = async () => {
     titulo: categoria.data.titulo,
     img: categoria.data.img.url,
   }));
-  console.log(categorias);
+
   return {
     props: { categorias, sliders },
     revalidate: 86400, //conteúdo vai revalidar a cada 24h

@@ -61,7 +61,7 @@ export const Slider = styled.div<SlideProps>`
 
 export const ImgContainer = styled.div`
   width: 20rem;
-  height: 100%;
+  height: 80%;
   flex: 1;
 `;
 
