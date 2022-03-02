@@ -6,6 +6,7 @@ import SliderImg from "../components/SliderImg";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
 import Lancamentos from "../components/Lancamentos";
+import Contato from "../components/Contato";
 
 interface ISlider {
   titulo: string;
@@ -36,6 +37,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <SliderImg sliders={sliders} />
       <Categorias categorias={categorias} />
       <Lancamentos />
+      <Contato />
       <main className="container"></main>
     </div>
   );
