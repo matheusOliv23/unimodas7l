@@ -1,3 +1,4 @@
+import { lighten } from "polished";
 import styled from "styled-components";
 
 interface DirectionProps {
@@ -21,14 +22,17 @@ export const Container = styled.section`
   height: 100vh;
   display: flex;
   position: relative;
-  background: #fff;
+  background: transparent;
   overflow: hidden;
+  color: ${({ theme }) => theme.textSlider};
 `;
 
 export const Arrow = styled.div<DirectionProps>`
   width: 3.125rem;
   height: 3.125rem;
-  background-color: #fff7f7;
+  background-color: ${({ theme }) => theme.backgroundDark};
+  color: ${({ theme }) => theme.primary};
+  font-size: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -42,6 +46,10 @@ export const Arrow = styled.div<DirectionProps>`
 
   right: ${(props) => props.direction === "right" && "20px"};
   left: ${(props) => props.direction === "left" && "20px"};
+
+  &:hover {
+    color: ${({ theme }) => lighten(0.3, theme.primary)};
+  }
 `;
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -56,7 +64,7 @@ export const Slider = styled.div<SlideProps>`
   height: 100vh;
   display: flex;
   align-items: center;
-  background: ${(props) => props.bgColor};
+  background: ${({ theme }) => theme.backgroundSlider};
 `;
 
 export const ImgContainer = styled.div`

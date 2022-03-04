@@ -6,7 +6,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     ::-webkit-scrollbar {
       width: 8px;
       height: 5px;
@@ -22,10 +22,11 @@ export default createGlobalStyle`
   body, html {
     width: 100%;
     height: 100%;
+    background: ${({ theme }) => theme.backgroundDark};
   }
   body {    
     background: ${(props) => props.theme.background};
-    font: 400 1rem 'Roboto', sans-serif;
+    font: 400 1rem 'Open Sans', sans-serif;
   }
   img {
     width: 100%;

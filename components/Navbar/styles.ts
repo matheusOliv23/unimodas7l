@@ -7,44 +7,92 @@ interface NavlinkProps {
 
 export const Container = styled.nav`
   width: 100%;
+  height: 5rem;
+  margin-top: -5rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 4rem;
-  padding: 1rem;
-  position: absolute;
-  z-index: 3;
+  justify-content: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
-  border-bottom: 1px solid ${({ theme }) => theme.border};
+  background-color: ${({ theme }) => theme.backgroundDark};
 
-  @media (max-width: 467px) {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  /* border-bottom: 1px solid ${({ theme }) => theme.border}; */
 
-  ul {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    font-size: 1.1rem;
+  @media screen and (max-width: 960px) {
+    transition: 0.5s all ease;
   }
 `;
 
+export const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  z-index: 1;
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+`;
+
+export const NavMenu = styled.ul`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: -1.4rem;
+
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+`;
+
+export const MobileIcone = styled.div`
+  display: none;
+
+  @media screen and (max-width: 760px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+    transform: translate(-100%, 60%);
+  }
+`;
+export const ContainerButton = styled.div`
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+`;
 export const Logo = styled.div`
   font-size: 1.8rem;
-  color: #fb8c00;
+  color: #fff;
+  justify-self: flex-start;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  /* color: #fb8c00; */
   border-top: 2px solid ${({ theme }) => theme.border};
   border-bottom: 4px solid ${({ theme }) => theme.border};
 `;
 
 export const NavlinkContainer = styled.li<NavlinkProps>`
+  padding: 0 1rem;
   a {
     text-transform: uppercase;
-    color: ${(props) =>
+    color: ${({ theme }) => theme.textNavbar};
+    /* color: ${(props) =>
       props.isActive
         ? props.theme.primary
         : props.theme
-            .primary}; //muda a cor do link caso ele esteja ativo ou não
+            .primary}; //muda a cor do link caso ele esteja ativo ou não */
+    border-bottom: 2px solid
+      ${(props) => (props.isActive ? props.theme.primary : "black")};
 
     &:hover {
       color: ${(props) =>
