@@ -7,6 +7,8 @@ import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
 import Lancamentos from "../components/Lancamentos";
 import Contato from "../components/Contato";
+import Sidebar from "../components/Sidebar";
+import { useState } from "react";
 
 interface ISlider {
   titulo: string;
@@ -25,6 +27,11 @@ interface ComponentesProps {
 }
 
 export default function Home({ sliders, categorias }: ComponentesProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
       <Head>
@@ -33,7 +40,8 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar handleToggle={handleToggle} />
+      <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <SliderImg sliders={sliders} />
       <Categorias categorias={categorias} />
       <Lancamentos />

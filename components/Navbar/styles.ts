@@ -102,6 +102,7 @@ export const NavlinkContainer = styled.li<NavlinkProps>`
               0.2,
               props.theme.primary
             )}; // muda o hover caso o link esteja ativo ou não
+      transition: 0.3s ease-in-out;
     }
   }
 `;

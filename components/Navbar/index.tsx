@@ -10,12 +10,12 @@ import Navlink from "./Navlink";
 import { FaBars } from "react-icons/fa";
 import Button from "../../styles/Button";
 
-function Navbar() {
+function Navbar({ handleToggle }: any) {
   return (
     <Container>
       <NavbarContainer>
         <Logo>UNIMODAS</Logo>
-        <MobileIcone>
+        <MobileIcone onClick={handleToggle}>
           <FaBars />
         </MobileIcone>
         <NavMenu>
