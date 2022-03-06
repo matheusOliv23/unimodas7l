@@ -1,5 +1,11 @@
 import React from "react";
-import { InfoCategorias, Titulo, Image, ContainerCategoria } from "./styles";
+import {
+  InfoCategorias,
+  Titulo,
+  Image,
+  ContainerCategoria,
+  ImgBox,
+} from "./styles";
 
 interface ICategorias {
   titulo: string;
@@ -13,10 +19,12 @@ interface CategoriasProp {
 export default function CategoriaItem({ item }: any) {
   return (
     <ContainerCategoria>
-      <Image src={item.img} />
-      <InfoCategorias>
-        <Titulo>{item.titulo}</Titulo>
-      </InfoCategorias>
+      <ImgBox>
+        <Image src={item.img} />
+      </ImgBox>
+
+      {/* <InfoCategorias></InfoCategorias> */}
+      <Titulo>{item.titulo}</Titulo>
     </ContainerCategoria>
   );
 }

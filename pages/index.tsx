@@ -9,6 +9,7 @@ import Lancamentos from "../components/Lancamentos";
 import Contato from "../components/Contato";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 interface ISlider {
   titulo: string;
@@ -46,6 +47,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <Categorias categorias={categorias} />
       <Lancamentos />
       <Contato />
+      <Footer />
       <main className="container"></main>
     </div>
   );

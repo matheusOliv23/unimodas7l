@@ -1,9 +1,14 @@
-import { Container } from "./styles";
+import { Container, Image, LogoFooter } from "./styles";
 
 function Footer() {
   return (
     <Container>
-      <h1>Footer</h1>
+      <div>SEMPRE PENSADO EM VOCÊ</div>
+      <LogoFooter>
+        <div>UNI</div>
+        <div>MODAS 7L</div>
+      </LogoFooter>
+      <div>Aki você é único</div>
     </Container>
   );
 }
