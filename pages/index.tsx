@@ -8,8 +8,9 @@ import Prismic from "@prismicio/client";
 import Lancamentos from "../components/Lancamentos";
 import Contato from "../components/Contato";
 import Sidebar from "../components/Sidebar";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import Footer from "../components/Footer";
+import Layout from "../Layout/layout";
 
 interface ISlider {
   titulo: string;
@@ -33,6 +34,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <div>
       <Head>
@@ -52,6 +54,9 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
     </div>
   );
 }
+
+
+
 
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();

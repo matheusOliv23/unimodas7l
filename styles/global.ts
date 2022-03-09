@@ -22,11 +22,12 @@ export default createGlobalStyle`
   body, html {
     width: 100%;
     height: 100%;
-    background: ${({ theme }) => theme.backgroundDark};
+    /* background: ${({ theme }) => theme.backgroundDark}; */
   }
-  body {    
-    background: ${(props) => props.theme.background};
+  body {  
+    background-color:#fff ;
     font: 400 1rem 'Open Sans', sans-serif;
+    color: black;
   }
   img {
     width: 100%;
