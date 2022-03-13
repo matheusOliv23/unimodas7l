@@ -9,6 +9,7 @@ export const Container = styled.section`
   margin-bottom: 2rem;
   gap: 2rem;
   height: 100%;
+  background-color: black;
 `;
 
 export const ContainerImagens = styled.div`
@@ -60,5 +61,5 @@ export const InfoCategorias = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  color: #fafafa;
+  color: #fff;
 `;
