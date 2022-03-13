@@ -8,10 +8,10 @@ import {
   Slider,
   Titulo,
   Descricao,
-  Button,
 } from "./styles";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
+import Button from "../../styles/Button";
 
 interface ISlider {
   titulo: string;
@@ -56,7 +56,7 @@ function SliderImg({ sliders }: SliderProps) {
             <InfoContainer>
               <Titulo>{item.titulo}</Titulo>
               <Descricao>{item.descricao}</Descricao>
-              <Button>FAÇA UM TOUR!</Button>
+              <Button titulo="FAÇA UM TOUR" link="/" />
             </InfoContainer>
           </Slider>
         ))}

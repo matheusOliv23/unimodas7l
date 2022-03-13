@@ -6,6 +6,7 @@ import { darken, lighten } from "polished";
 interface ButtonProps {
   titulo: string;
   link: string;
+  onClick?: any;
 }
 
 const ButtonContainer = styled.button`
@@ -27,10 +28,10 @@ const ButtonContainer = styled.button`
   }
 `;
 
-export default function Button({ titulo, link }: ButtonProps) {
+export default function Button({ titulo, link, onClick }: ButtonProps) {
   return (
     <Link href={link}>
-      <ButtonContainer>{titulo}</ButtonContainer>
+      <ButtonContainer onClick={onClick}>{titulo}</ButtonContainer>
     </Link>
   );
 }
