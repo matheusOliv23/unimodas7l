@@ -1,12 +1,32 @@
-import { Container, Filtro, FiltroContainer, Titulo } from "./styles";
+import {
+  Container,
+  Filtro,
+  FiltroContainer,
+  FiltroTexto,
+  Select,
+  Titulo,
+  Option,
+} from "./styles";
 
 export default function FiltroProdutos() {
   return (
     <Container>
       <Titulo>Roupas</Titulo>
       <FiltroContainer>
-        <Filtro>filtro1</Filtro>
-        <Filtro>filtro1</Filtro>
+        <Filtro>
+          <FiltroTexto>Filtro de Categorias:</FiltroTexto>
+          <Select>
+            <Option>Todos</Option>
+            <Option>teste</Option>
+            <Option>teste</Option>
+            <Option>teste</Option>
+          </Select>
+        </Filtro>
+        <Filtro>
+          <Select>
+            <Option selected>Recentes</Option>
+          </Select>
+        </Filtro>
       </FiltroContainer>
     </Container>
   );
