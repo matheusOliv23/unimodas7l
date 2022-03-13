@@ -22,9 +22,9 @@ export default function CategoriaItem({ item }: any) {
       <ImgBox>
         <Image src={item.img} />
       </ImgBox>
-
-      {/* <InfoCategorias></InfoCategorias> */}
-      <Titulo>{item.titulo}</Titulo>
+      <InfoCategorias>
+        <Titulo>{item.titulo}</Titulo>
+      </InfoCategorias>
     </ContainerCategoria>
   );
 }
