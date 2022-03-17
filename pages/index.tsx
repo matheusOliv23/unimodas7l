@@ -11,6 +11,8 @@ import Sidebar from "../components/Sidebar";
 import { ReactElement, useState } from "react";
 import Footer from "../components/Footer";
 import Layout from "../Layout/layout";
+import Info from "../components/Info";
+import Regioes from "../components/Regioes";
 
 interface ISlider {
   titulo: string;
@@ -47,6 +49,8 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <SliderImg sliders={sliders} />
       <Categorias categorias={categorias} />
+      <Info />
+      <Regioes />
       <Lancamentos />
       <Contato />
       <Footer />
