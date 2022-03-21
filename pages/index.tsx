@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Categorias from "../components/Categorias/index";
@@ -8,9 +8,8 @@ import Prismic from "@prismicio/client";
 import Lancamentos from "../components/Lancamentos";
 import Contato from "../components/Contato";
 import Sidebar from "../components/Sidebar";
-import { ReactElement, useState } from "react";
+import { useState } from "react";
 import Footer from "../components/Footer";
-import Layout from "../Layout/layout";
 import Info from "../components/Info";
 import Regioes from "../components/Regioes";
 
@@ -51,16 +50,13 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <Categorias categorias={categorias} />
       <Info />
       <Regioes />
-      <Lancamentos />
+      {/* <Lancamentos /> */}
       <Contato />
       <Footer />
       <main className="container"></main>
     </div>
   );
 }
-
-
-
 
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();

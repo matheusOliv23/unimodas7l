@@ -26,7 +26,6 @@ interface SliderProps {
 function SliderImg({ sliders }: SliderProps) {
   const [slideIndex, setSlideIndex] = useState(0);
 
-  console.log(sliders);
 
   function handleClick(direction: string) {
     if (direction === "left") {
