@@ -41,6 +41,7 @@ export default createGlobalStyle`
   }
   a {
     text-decoration: none;
+    text-decoration-line: none;
   }
   .container {
     width: 100%;

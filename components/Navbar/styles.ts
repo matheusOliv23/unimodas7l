@@ -85,6 +85,7 @@ export const NavlinkContainer = styled.li<NavlinkProps>`
   padding: 0 1rem;
   a {
     text-transform: uppercase;
+    text-decoration: none;
     color: ${({ theme }) => theme.textNavbar};
     /* color: ${(props) =>
       props.isActive

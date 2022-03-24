@@ -2,68 +2,92 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: #fff;
-  background: black;
-  height: 100vh;
+  background: #010606;
+  height: 800px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    height: 1100px;
   }
-`;
-
-export const InfoWrapper = styled.div`
-  padding: 1.5rem;
-`;
-
-export const InfoRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
-`;
-
-export const Column1 = styled.div``;
-
-export const Column2 = styled.div``;
-
-export const TextWrapper = styled.div`
-  padding-top: 0;
-  padding-bottom: 60px;
-`;
-
-export const TopLine = styled.p`
-  color: #01bf71;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-`;
-
-export const Heading = styled.h1`
-  margin-bottom: 1.5rem;
-  font-size: 48px;
-  line-height: 1.2px;
-  font-weight: 600;
-  color: black;
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    height: 1300px;
   }
 `;
 
-export const Subtitle = styled.p`
-  max-width: 440px;
-  margin-bottom: 35px;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: black;
+export const RegioesWraper = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 1rem;
+  padding: 0 50px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
 `;
 
-export const ButtonWrap = styled.div`
+export const RegioesCard = styled.div`
+  background: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  max-height: 340px;
+  padding: 30px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
+
+export const RegiaoIcon = styled.img`
+  height: 160px;
+  width: 160px;
+  margin-bottom: 10px;
+`;
+
+export const RegioesTitulo = styled.h1`
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
+`;
+
+export const Titulo2 = styled.h1`
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 10px;
+`;
+
+export const WhatsButton = styled.button`
+  margin-bottom: 35px;
+  font-size: 1rem;
+  color: #fff;
+`;
+
+export const RegioaoP = styled.p`
+  font-size: 1rem;
+  text-align: center;
 `;
 
 export const ImgWrap = styled.div`

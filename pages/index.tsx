@@ -12,6 +12,7 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import Info from "../components/Info";
 import Regioes from "../components/Regioes";
+import Crediario from "../components/Crediario";
 
 interface ISlider {
   titulo: string;
@@ -48,10 +49,11 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <SliderImg sliders={sliders} />
       <Categorias categorias={categorias} />
-      <Info />
+
+      <Crediario />
       <Regioes />
-      {/* <Lancamentos /> */}
-      <Contato />
+      {/* <Info /> */}
+      {/* <Contato /> */}
       <Footer />
       <main className="container"></main>
     </div>

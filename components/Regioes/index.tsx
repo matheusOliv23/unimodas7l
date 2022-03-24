@@ -1,40 +1,28 @@
-import Button from "../../styles/Button";
 import {
-  ButtonWrap,
-  Column1,
-  Column2,
   Container,
-  Heading,
-  Img,
-  ImgWrap,
-  InfoRow,
-  InfoWrapper,
-  Subtitle,
-  TextWrapper,
-  TopLine,
+  RegiaoIcon,
+  RegioesCard,
+  RegioesTitulo,
+  RegioesWraper,
+  Titulo2,
+  WhatsButton,
 } from "./styles";
+
+const cidades = [{ nome: " Sete Lagoas" }, { nome: "Sete lagoas" }];
 
 function Regioes() {
   return (
     <Container>
-      <InfoWrapper>
-        <InfoRow>
-          <Column1>
-            <TextWrapper>
-              <TopLine>TopLine</TopLine>
-              <Heading>Heading</Heading>
-              <Subtitle>Subtitle</Subtitle>
-              <ButtonWrap>
-                <Button titulo="Button" link="/" />
-              </ButtonWrap>
-            </TextWrapper>
-          </Column1>
-
-          <Column2>
-            <ImgWrap>{/* <Img /> */}</ImgWrap>
-          </Column2>
-        </InfoRow>
-      </InfoWrapper>
+      <RegioesTitulo>Regiões disponíveis</RegioesTitulo>
+      <RegioesWraper>
+        {cidades.map((cidade, index) => (
+          <RegioesCard key={index}>
+            <Titulo2>{cidade.nome}</Titulo2>
+            <RegiaoIcon />
+          </RegioesCard>
+        ))}
+      </RegioesWraper>
+      <WhatsButton>Encomende já</WhatsButton>
     </Container>
   );
 }
