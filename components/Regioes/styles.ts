@@ -1,3 +1,4 @@
+import { lighten } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -80,9 +81,18 @@ export const Titulo2 = styled.h1`
 `;
 
 export const WhatsButton = styled.button`
+  margin-top: 35px;
   margin-bottom: 35px;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   color: #fff;
+  background-color: #01bf71;
+
+  &:hover {
+    transition: all 0.5 ease-in-out;
+    background: ${({ theme }) => lighten(0.1, theme.buttonBackground)};
+  }
 `;
 
 export const RegioaoP = styled.p`

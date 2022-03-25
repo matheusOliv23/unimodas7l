@@ -8,7 +8,14 @@ import {
   WhatsButton,
 } from "./styles";
 
-const cidades = [{ nome: " Sete Lagoas" }, { nome: "Sete lagoas" }];
+const cidades = [
+  "Cachoeira da Prata",
+  "Capim Branco",
+  "Jequitibá",
+  "Matozinhos",
+  "Santanas de Pirapamba",
+  "Sete Lagoas",
+];
 
 function Regioes() {
   return (
@@ -17,7 +24,7 @@ function Regioes() {
       <RegioesWraper>
         {cidades.map((cidade, index) => (
           <RegioesCard key={index}>
-            <Titulo2>{cidade.nome}</Titulo2>
+            <Titulo2>{cidade}</Titulo2>
             <RegiaoIcon />
           </RegioesCard>
         ))}
