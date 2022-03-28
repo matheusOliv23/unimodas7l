@@ -31,9 +31,7 @@ function Crediario() {
             </TextWrapper>
           </Column1>
 
-          <Column2>
-            <ImgWrap>{/* <Img /> */}</ImgWrap>
-          </Column2>
+          <Column2>{/* <ImgWrap></ImgWrap> */}</Column2>
         </InfoRow>
       </InfoWrapper>
     </Container>

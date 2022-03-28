@@ -4,12 +4,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   color: #fff;
   background: #010606;
-  height: 800px;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -21,7 +22,6 @@ export const Container = styled.div`
 `;
 
 export const RegioesWraper = styled.div`
-  max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -45,9 +45,9 @@ export const RegioesCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 10px;
-  max-height: 340px;
-  padding: 30px;
+  border-radius: 0.625rem;
+  max-height: 10rem;
+  padding: 2rem;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 

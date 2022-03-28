@@ -25,7 +25,7 @@ function Regioes() {
         {cidades.map((cidade, index) => (
           <RegioesCard key={index}>
             <Titulo2>{cidade}</Titulo2>
-            <RegiaoIcon />
+            {/* <RegiaoIcon /> */}
           </RegioesCard>
         ))}
       </RegioesWraper>
