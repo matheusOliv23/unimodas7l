@@ -4,21 +4,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   color: #fff;
   background: #010606;
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
-
-  @media screen and (max-width: 768px) {
-    height: 1100px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1300px;
-  }
+  gap: 4rem;
+  padding: 1rem;
 `;
 
 export const RegioesWraper = styled.div`
@@ -30,7 +22,7 @@ export const RegioesWraper = styled.div`
   padding: 0 50px;
 
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   @media screen and (max-width: 768px) {
@@ -40,16 +32,20 @@ export const RegioesWraper = styled.div`
 `;
 
 export const RegioesCard = styled.div`
-  background: #fff;
+  transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  border-radius: 0.625rem;
-  max-height: 10rem;
-  padding: 2rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
+  justify-content: center;
+  background: rgba(164, 164, 164, 0.1);
+  border: 1px solid #cccccc;
+  height: 17rem;
+  padding: 3.625rem 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  color: white;
 
   &:hover {
     transform: scale(1.02);
@@ -65,24 +61,29 @@ export const RegiaoIcon = styled.img`
 `;
 
 export const RegioesTitulo = styled.h1`
-  font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 64px;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
 `;
 
-export const Titulo2 = styled.h1`
-  color: black;
-  font-size: 1rem;
-  margin-bottom: 10px;
+export const Titulo2 = styled.h3`
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
 `;
 
 export const WhatsButton = styled.button`
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
   padding: 1.2rem;
   border-radius: 0.5rem;
   font-size: 1rem;

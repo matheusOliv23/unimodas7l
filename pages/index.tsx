@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import Info from "../components/Info";
 import Regioes from "../components/Regioes";
 import Crediario from "../components/Crediario";
+import FormasPagamento from "../components/FormasPagamento";
 
 interface ISlider {
   titulo: string;
@@ -50,7 +51,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <SliderImg sliders={sliders} />
       <Categorias categorias={categorias} />
 
-      <Crediario />
+      <FormasPagamento />
       <Regioes />
       {/* <Info /> */}
       {/* <Contato /> */}
