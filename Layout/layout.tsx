@@ -14,8 +14,10 @@ export default function Layout({ children }: ILayout) {
   };
   return (
     <>
-      {/* <Navbar handleToggle={handleToggle} /> */}
-      <main>{children}</main>
+      <Navbar handleToggle={handleToggle} />
+
+      <div>{children}</div>
+
       <Footer />
     </>
   );

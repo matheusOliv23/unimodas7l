@@ -9,9 +9,11 @@ export const Container = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-top: 8rem;
 `;
 
-export const Image = styled.img``;
+
 
 export const LogoFooter = styled.div`
   font-size: 2rem;

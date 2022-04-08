@@ -56,7 +56,6 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       {/* <Info /> */}
       {/* <Contato /> */}
       <Footer />
-      <main className="container"></main>
     </div>
   );
 }

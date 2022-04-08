@@ -1,4 +1,4 @@
-import { Container, Image, LogoFooter } from "./styles";
+import { Container, LogoFooter } from "./styles";
 
 function Footer() {
   return (

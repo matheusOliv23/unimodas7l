@@ -25,6 +25,12 @@ export const Container = styled.section`
   background: transparent;
   overflow: hidden;
   color: ${({ theme }) => theme.textSlider};
+
+  margin-top: -5rem;
+
+  @media (max-width: 480px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const Arrow = styled.div<DirectionProps>`
@@ -71,6 +77,10 @@ export const ImgContainer = styled.div`
   width: 20rem;
   height: 80%;
   flex: 1;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const Image = styled.img`
@@ -80,6 +90,10 @@ export const Image = styled.img`
 export const InfoContainer = styled.div`
   flex: 1;
   padding: 3.125rem;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
 `;
 
 export const Titulo = styled.h1`

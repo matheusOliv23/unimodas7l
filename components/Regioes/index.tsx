@@ -20,7 +20,9 @@ const cidades = [
 function Regioes() {
   return (
     <Container>
-      <RegioesTitulo>Regiões disponíveis para entrega</RegioesTitulo>
+      <RegioesTitulo>
+        Estamos em Sete Lagoas mas fazemos entregas nas seguintes cidades
+      </RegioesTitulo>
       <RegioesWraper>
         {cidades.map((cidade, index) => (
           <RegioesCard key={index}>

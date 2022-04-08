@@ -18,6 +18,7 @@ export const FiltroTexto = styled.span`
 `;
 
 export const Titulo = styled.h1`
+  margin-top: 20rem;
   margin: 1.3rem;
   font-weight: 600;
 `;
