@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.footer`
+export const ContainerFooter = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${({ theme }) => theme.backgroundDark};
+  color: #fafafa;
+`;
+
+export const ContainerLogo = styled.footer`
   background-color: ${({ theme }) => theme.backgroundDark};
   color: #fafafa;
   font-size: 0.7rem;
@@ -9,8 +19,6 @@ export const Container = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  margin-top: 8rem;
 `;
 
 

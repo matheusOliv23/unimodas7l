@@ -9,12 +9,23 @@ import {
 import Navlink from "./Navlink";
 import { FaBars } from "react-icons/fa";
 import Button from "../../styles/Button";
+import Link from "next/link";
+import { useState } from "react";
 
-function Navbar({ handleToggle }: any) {
+interface NavbarProps {
+  handleToggle: any;
+}
+
+function Navbar({ handleToggle }: NavbarProps) {
   return (
     <Container>
       <NavbarContainer>
-        <Logo>UNIMODAS</Logo>
+        <Link href="/" passHref>
+          <a>
+            <Logo>UNIMODAS</Logo>
+          </a>
+        </Link>
+
         <MobileIcone onClick={handleToggle}>
           <FaBars />
         </MobileIcone>

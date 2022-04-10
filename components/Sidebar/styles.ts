@@ -15,8 +15,6 @@ export const Container = styled.aside<SidebarProps>`
   align-items: center;
   right: 0;
   transition: 0.3s ease-in-out;
-  /* top: 0; */
-  /* opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")}; */
   top: ${(props) => (props.isOpen ? "0" : "-100%")};
 `;
 
