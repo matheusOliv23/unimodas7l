@@ -3,7 +3,7 @@ const theme = {
   backgroundLight: "#ffe0b2",
   backgroundDark: "black",
   backgroundSlider: "#fff",
-  buttonBackground: "#f49839",
+  buttonBackground: "#25D366",
   textNavbar: "white",
   primary: "#fb8c00",
   secondary: "#7AC7E3",

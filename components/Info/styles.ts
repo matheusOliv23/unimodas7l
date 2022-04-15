@@ -41,7 +41,7 @@ export const TopLine = styled.p`
   margin-bottom: 1rem;
 `;
 
-export const Heading = styled.h1`
+export const Heading = styled.p`
   margin-bottom: 1.5rem;
   font-size: 48px;
   line-height: 1.2px;
@@ -55,9 +55,10 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
   max-width: 440px;
+  margin-top: 35px;
   margin-bottom: 35px;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
   color: black;
 `;
 

@@ -10,21 +10,26 @@ interface ButtonProps {
 }
 
 const ButtonContainer = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 1rem;
   border: none;
-  color: black;
-  background: ${({ theme }) => theme.buttonBackground};
+  color: white;
+  background: ${({ theme }) => theme.primary};
   white-space: nowrap;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem "DM Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
 
   &:hover {
     transition: all 0.3 ease-in-out;
-    background: ${({ theme }) => lighten(0.1, theme.buttonBackground)};
+    background: ${({ theme }) => lighten(0.1, theme.primary)};
   }
 `;
 

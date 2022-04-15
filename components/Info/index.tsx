@@ -21,11 +21,13 @@ function Info() {
         <InfoRow>
           <Column1>
             <TextWrapper>
-              <TopLine>TopLine</TopLine>
-              <Heading>Heading</Heading>
-              <Subtitle>Subtitle</Subtitle>
+              <Heading>Entre em contato</Heading>
+              <Subtitle>
+                Nós da Unimodas7L teremos o maior prazer em tirar todas as suas
+                dúvidas com um bom atendimento e ótimos preços!
+              </Subtitle>
               <ButtonWrap>
-                <Button titulo="Button" link="/" />
+                <Button titulo="Whatsapp" link="/" />
               </ButtonWrap>
             </TextWrapper>
           </Column1>

@@ -22,7 +22,7 @@ function Navbar({ handleToggle }: NavbarProps) {
       <NavbarContainer>
         <Link href="/" passHref>
           <a>
-            <Logo>UNIMODAS</Logo>
+            <Logo>UNIMODAS7L</Logo>
           </a>
         </Link>
 

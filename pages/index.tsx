@@ -53,8 +53,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
 
       <FormasPagamento />
       <Regioes />
-      {/* <Info /> */}
-      {/* <Contato /> */}
+      <Info />
       <Footer />
     </div>
   );

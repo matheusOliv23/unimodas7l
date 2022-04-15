@@ -1,3 +1,4 @@
+import Button from "../../styles/Button";
 import {
   Container,
   RegiaoIcon,
@@ -31,7 +32,7 @@ function Regioes() {
           </RegioesCard>
         ))}
       </RegioesWraper>
-      <WhatsButton>Encomende já</WhatsButton>
+      <Button titulo="Encomende agora!!" link="/" />
     </Container>
   );
 }
