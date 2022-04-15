@@ -13,8 +13,7 @@ function Footer() {
         <div>Aki você é único</div>
       </ContainerLogo>
 
-      <div>Termos de Serviço</div>
-      <div>Política de Privacidade</div>
+  
     </ContainerFooter>
   );
 }
