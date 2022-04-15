@@ -11,6 +11,7 @@ export const ContainerFormas = styled.div`
   gap: 4rem;
   padding: 1rem;
   margin-bottom: 2rem;
+  height: 100vh;
 `;
 
 export const ContainerTitulo = styled.div`

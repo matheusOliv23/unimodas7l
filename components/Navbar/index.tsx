@@ -35,7 +35,7 @@ function Navbar({ handleToggle }: NavbarProps) {
           <Navlink titulo="Produtos" rota="/produtos" />
         </NavMenu>
         <ContainerButton>
-          <Button titulo="Crediário" link="/crediario" />
+          <Button link="/crediario">Entre em contato</Button>
         </ContainerButton>
       </NavbarContainer>
     </Container>

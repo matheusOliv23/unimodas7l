@@ -55,7 +55,7 @@ function SliderImg({ sliders }: SliderProps) {
             <InfoContainer>
               <Titulo>{item.titulo}</Titulo>
               <Descricao>{item.descricao}</Descricao>
-              <Button titulo="FAÇA UM TOUR" link="/" />
+              <Button link="/">CONFIRA</Button>
             </InfoContainer>
           </Slider>
         ))}

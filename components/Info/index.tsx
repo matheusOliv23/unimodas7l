@@ -5,6 +5,7 @@ import {
   Column2,
   Container,
   Heading,
+  IconContainer,
   Img,
   ImgWrap,
   InfoRow,
@@ -13,6 +14,7 @@ import {
   TextWrapper,
   TopLine,
 } from "./styles";
+import { Icon } from "@iconify/react";
 
 function Info() {
   return (
@@ -27,13 +29,23 @@ function Info() {
                 dúvidas com um bom atendimento e ótimos preços!
               </Subtitle>
               <ButtonWrap>
-                <Button titulo="Whatsapp" link="/" />
+                <Button link="/">
+                  <Icon width="1.8rem" icon="logos:whatsapp" />
+                  Fale conosco
+                </Button>
               </ButtonWrap>
             </TextWrapper>
           </Column1>
 
           <Column2>
-            <ImgWrap>{/* <Img /> */}</ImgWrap>
+            <IconContainer>
+              <Icon icon="carbon:email" />
+              <div>unimodas1538@gmail.com</div>
+            </IconContainer>
+            <IconContainer>
+              <Icon icon="logos:whatsapp" />
+              <div>unimodas</div>
+            </IconContainer>
           </Column2>
         </InfoRow>
       </InfoWrapper>

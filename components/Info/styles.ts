@@ -18,13 +18,27 @@ export const InfoWrapper = styled.div`
 export const InfoRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100vh;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const Column1 = styled.div``;
 
-export const Column2 = styled.div``;
+export const Column2 = styled.div`
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
+`;
 
 export const TextWrapper = styled.div`
   padding-top: 0;
@@ -72,6 +86,9 @@ export const ImgWrap = styled.div`
   height: 300px;
   border-radius: 50%;
   background-color: black;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
 `;
 
 export const Img = styled.img`
@@ -79,3 +96,10 @@ export const Img = styled.img`
   margin: 0 0 10px 0;
   padding-right: 0;
 `;
+
+export const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+`;
+

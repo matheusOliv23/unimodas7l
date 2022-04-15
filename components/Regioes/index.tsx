@@ -32,7 +32,7 @@ function Regioes() {
           </RegioesCard>
         ))}
       </RegioesWraper>
-      <Button titulo="Encomende agora!!" link="/" />
+      <Button link="/">Encomende já!</Button>
     </Container>
   );
 }

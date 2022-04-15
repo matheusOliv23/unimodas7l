@@ -29,7 +29,7 @@ export const Container = styled.section`
   margin-top: -5rem;
 
   @media (max-width: 480px) {
-    margin-top: 3rem;
+    margin-top: -5rem;
   }
 `;
 

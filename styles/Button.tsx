@@ -4,7 +4,7 @@ import Link from "next/link";
 import { darken, lighten } from "polished";
 
 interface ButtonProps {
-  titulo: string;
+  children: ReactNode;
   link: string;
   onClick?: any;
 }
@@ -13,6 +13,7 @@ const ButtonContainer = styled.button`
   border-radius: 1rem;
   border: none;
   color: white;
+  gap: 1rem;
   background: ${({ theme }) => theme.primary};
   white-space: nowrap;
   padding: 0.5rem 1rem;
@@ -33,10 +34,10 @@ const ButtonContainer = styled.button`
   }
 `;
 
-export default function Button({ titulo, link, onClick }: ButtonProps) {
+export default function Button({ children, link, onClick }: ButtonProps) {
   return (
     <Link href={link}>
-      <ButtonContainer onClick={onClick}>{titulo}</ButtonContainer>
+      <ButtonContainer onClick={onClick}>{children}</ButtonContainer>
     </Link>
   );
 }
