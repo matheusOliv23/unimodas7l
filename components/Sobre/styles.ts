@@ -31,6 +31,7 @@ export const Card = styled.div`
   padding-left: 3rem;
   border-radius: 1.5rem;
   text-align: center;
+  font-size: 1.3rem;
 `;
 
 export const Subtitle = styled.h3`
