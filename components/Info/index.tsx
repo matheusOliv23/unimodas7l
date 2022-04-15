@@ -29,8 +29,10 @@ function Info() {
                 dúvidas com um bom atendimento e ótimos preços!
               </Subtitle>
               <ButtonWrap>
-                <Button link="/">
-                  <Icon width="1.8rem" icon="logos:whatsapp" />
+                <Button link="https://api.whatsapp.com/send/?phone=5531996662795&text&app_absent=0">
+                  <a target="_blank">
+                    <Icon width="1.8rem" icon="logos:whatsapp" />
+                  </a>
                   Fale conosco
                 </Button>
               </ButtonWrap>
