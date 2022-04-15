@@ -5,6 +5,9 @@ export const ContainerFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
+  bottom: 0;
 
   background-color: ${({ theme }) => theme.backgroundDark};
   color: #fafafa;
