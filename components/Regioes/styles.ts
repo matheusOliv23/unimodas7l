@@ -11,6 +11,9 @@ export const Container = styled.div`
   align-items: center;
   gap: 4rem;
   padding: 1rem;
+
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 `;
 
 export const RegioesWraper = styled.div`
@@ -39,7 +42,7 @@ export const RegioesCard = styled.div`
   justify-content: center;
   background: rgba(164, 164, 164, 0.1);
   border: 1px solid #cccccc;
-  height: 17rem;
+  height: 8rem;
   padding: 3.625rem 2rem;
   padding-right: 3rem;
   padding-left: 3rem;

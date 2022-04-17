@@ -7,7 +7,10 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
 
-  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  gap: 4rem;
   height: auto;
   background-color: black;
 `;
@@ -18,6 +21,7 @@ export const ContainerImagens = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 100vh;
 `;
 export const ImgBox = styled.div`
   width: 12.5rem;
