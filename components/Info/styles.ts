@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   color: #fff;
   background: #f9f9f9;
-  height: 100vh;
+
   width: 100%;
 
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
+  @media screen and (max-width: 500px) {
+    text-align: center;
   }
 `;
 
@@ -21,13 +21,17 @@ export const InfoRow = styled.div`
   justify-content: space-around;
   height: 100vh;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     flex-direction: column;
     justify-content: center;
   }
 `;
 
-export const Column1 = styled.div``;
+export const Column1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
 
 export const Column2 = styled.div`
   color: black;
@@ -43,6 +47,10 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
   padding-top: 0;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 850px) {
+    text-align: center;
+  }
 `;
 
 export const TopLine = styled.p`
@@ -79,6 +87,10 @@ export const Subtitle = styled.p`
 export const ButtonWrap = styled.div`
   display: flex;
   justify-content: flex-start;
+
+  @media screen and (max-width: 850px) {
+    justify-content: center;
+  }
 `;
 
 export const ImgWrap = styled.div`

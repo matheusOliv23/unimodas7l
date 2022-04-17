@@ -8,12 +8,8 @@ export const Container = styled.section`
   align-items: center;
 
   gap: 2rem;
-  height: 100vh;
+  height: auto;
   background-color: black;
-
-  @media screen and (max-width: 500px) {
-    height: 100%;
-  }
 `;
 
 export const ContainerImagens = styled.div`

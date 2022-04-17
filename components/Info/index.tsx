@@ -26,7 +26,7 @@ function Info() {
               <Heading>Entre em contato</Heading>
               <Subtitle>
                 Nós da Unimodas7L teremos o maior prazer em tirar todas as suas
-                dúvidas com um bom atendimento e ótimos preços!
+                dúvidas com um excelente atendimento!
               </Subtitle>
               <ButtonWrap>
                 <Button link="https://api.whatsapp.com/send/?phone=5531996662795&text&app_absent=0">
