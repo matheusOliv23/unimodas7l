@@ -1,6 +1,7 @@
 import { Container, ContainerCategoria, ContainerImagens } from "./styles";
 import CategoriaItem from "./CategoriaItem";
 import SecaoTitulo from "../SecaoTitulo";
+import Button from "../../styles/Button";
 
 interface ICategorias {
   titulo: string;
@@ -14,12 +15,13 @@ interface CategoriasProp {
 export default function Categorias({ categorias }: CategoriasProp) {
   return (
     <Container>
-      <SecaoTitulo titulo="Nossas categorias" />
+      <SecaoTitulo titulo="Nossos tipos de looks" />
       <ContainerImagens>
         {categorias.map((item, index) => (
           <CategoriaItem key={index} item={item} />
         ))}
       </ContainerImagens>
+      <Button link="/produtos">Veja Mais</Button>
     </Container>
   );
 }

@@ -6,6 +6,8 @@ export const ContainerFooter = styled.footer`
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 1rem;
+  text-decoration: none;
 
   bottom: 0;
 
@@ -17,14 +19,12 @@ export const ContainerLogo = styled.footer`
   background-color: ${({ theme }) => theme.backgroundDark};
   color: #fafafa;
   font-size: 0.7rem;
-  padding: 4rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
-
-
 
 export const LogoFooter = styled.div`
   font-size: 2rem;
@@ -35,4 +35,10 @@ export const LogoFooter = styled.div`
   margin: 0.5rem;
 `;
 
-export const FooterRodape = styled.div``;
+export const IconFooter = styled.div`
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+`;

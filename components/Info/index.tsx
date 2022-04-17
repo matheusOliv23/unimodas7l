@@ -46,7 +46,7 @@ function Info() {
             </IconContainer>
             <IconContainer>
               <Icon icon="logos:whatsapp" />
-              <div>unimodas</div>
+              <div>31 9 9666-2795</div>
             </IconContainer>
           </Column2>
         </InfoRow>

@@ -6,10 +6,14 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+
   gap: 2rem;
-  height: 100%;
+  height: 100vh;
   background-color: black;
+
+  @media screen and (max-width: 500px) {
+    height: 100%;
+  }
 `;
 
 export const ContainerImagens = styled.div`
@@ -29,7 +33,7 @@ export const ImgBox = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 100%;
+  max-width: 14rem;
   border-radius: 2px;
   object-fit: cover;
 `;
@@ -46,11 +50,11 @@ export const ContainerCategoria = styled.div`
   border-radius: 0.7rem;
 
   /* height: 70vh; */
-
+  /* 
   &:hover {
     opacity: 0.8;
     height: 25rem;
-  }
+  } */
 `;
 
 export const InfoCategorias = styled.div`

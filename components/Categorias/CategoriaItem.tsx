@@ -17,6 +17,7 @@ interface CategoriasProp {
 }
 
 export default function CategoriaItem({ item }: any) {
+  console.log(item);
   return (
     <ContainerCategoria>
       <ImgBox>
