@@ -24,7 +24,7 @@ function Sidebar({ isOpen, handleToggle }: any) {
           <Navlink titulo="Produtos" rota="/produtos" />
         </SidebarMenu>
         <SidebarButton>
-          <Button titulo="Crediário" link="/crediario" />
+          <Button link="/crediario">FAÇA SEU CREDIÁRIO</Button>
         </SidebarButton>
       </SidebarWrapper>
     </Container>

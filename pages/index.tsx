@@ -5,14 +5,11 @@ import Categorias from "../components/Categorias/index";
 import SliderImg from "../components/SliderImg";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
-import Lancamentos from "../components/Lancamentos";
-import Contato from "../components/Contato";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Info from "../components/Info";
 import Regioes from "../components/Regioes";
-import Crediario from "../components/Crediario";
 import FormasPagamento from "../components/FormasPagamento";
 
 interface ISlider {
