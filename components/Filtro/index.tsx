@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Container,
   Filtro,
@@ -8,17 +9,22 @@ import {
   Option,
 } from "./styles";
 
+interface IRoupas {
+  titulo?: string;
+  img: string;
+}
+
 export default function FiltroProdutos() {
+  const [roupas, setRoupas] = useState<IRoupas>();
   return (
     <Container>
-      <Titulo>Roupas</Titulo>
+      <Titulo>Amostras de nossos produtos</Titulo>
       <FiltroContainer>
         <Filtro>
           <FiltroTexto>Filtro de Categorias:</FiltroTexto>
           <Select>
             <Option>Todos</Option>
-            <Option>teste</Option>
-            <Option>teste</Option>
+            <Option>teste</Option>0<Option>teste</Option>
             <Option>teste</Option>
           </Select>
         </Filtro>
