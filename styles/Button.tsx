@@ -12,9 +12,10 @@ interface ButtonProps {
 const ButtonContainer = styled.button`
   border-radius: 1rem;
   border: none;
-  color: white;
   gap: 1rem;
-  background: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.backgroundDark};
+  border: 3px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
   white-space: nowrap;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -24,13 +25,13 @@ const ButtonContainer = styled.button`
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem "DM Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 
   &:hover {
     transition: all 0.3 ease-in-out;
-    background: ${({ theme }) => lighten(0.1, theme.primary)};
+    background: ${({ theme }) => theme.backgroundDark};
+    color: ${({ theme }) => theme.textLight};
   }
 `;
 

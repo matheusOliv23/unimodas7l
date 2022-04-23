@@ -14,19 +14,39 @@ interface IRoupas {
   img: string;
 }
 
-export default function FiltroProdutos() {
-  const [roupas, setRoupas] = useState<IRoupas>();
+interface Props {
+  roupas: IRoupas[];
+}
+
+export default function FiltroProdutos({ roupas }: Props) {
+  const [filterResults, setFilterResults] = useState("Roupas");
+
+  function SearchFilter() {
+    if (filterResults === "Roupas") {
+      const roupasFiltradas = roupas.map((roupa, index) => (
+        <div key={index}>{roupa.titulo}</div>
+      ));
+      return roupasFiltradas;
+    } else if (filterResults === "Sapatos") {
+      console.log("amo sapatos");
+    }
+  }
   return (
     <Container>
-      <Titulo>Amostras de nossos produtos</Titulo>
+      <Titulo>Amostras de nossos Looks</Titulo>
       <FiltroContainer>
         <Filtro>
           <FiltroTexto>Filtro de Categorias:</FiltroTexto>
-          <Select>
-            <Option>Todos</Option>
-            <Option>teste</Option>0<Option>teste</Option>
-            <Option>teste</Option>
+          <Select
+            value={filterResults}
+            onChange={(e) => setFilterResults(e.target.value)}
+          >
+            <Option value="Roupas">Roupas</Option>
+            <Option value="Sapatos">Sapatos</Option>
+            <Option value="Bolsas">Bolsas</Option>
           </Select>
+          {console.log(filterResults)}
+          {SearchFilter()}
         </Filtro>
         <Filtro>
           <Select>

@@ -1,6 +1,10 @@
 import Button from "../../styles/Button";
+import { Subtitle } from "../FormasPagamento/styles";
+import { AiOutlineHome } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 import {
   Container,
+  IconContainer,
   RegiaoIcon,
   RegioesCard,
   RegioesTitulo,
@@ -21,14 +25,21 @@ const cidades = [
 function Regioes() {
   return (
     <Container>
-      <RegioesTitulo>
-        Estamos em Sete Lagoas mas fazemos entregas nas seguintes cidades
-      </RegioesTitulo>
+      <div>
+        <RegioesTitulo>Regiões para entrega</RegioesTitulo>
+        <Subtitle>
+          Se você mora em uma dessas cidades, não perca tempo e encomende já!
+        </Subtitle>
+      </div>
+
       <RegioesWraper>
         {cidades.map((cidade, index) => (
           <RegioesCard key={index}>
+            <IconContainer>
+              <Icon icon="clarity:home-solid" />
+            </IconContainer>
+
             <Titulo2>{cidade}</Titulo2>
-            {/* <RegiaoIcon /> */}
           </RegioesCard>
         ))}
       </RegioesWraper>

@@ -44,7 +44,6 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
 
       <FormasPagamento />
       <Regioes />
-      <Info />
       <Footer />
     </div>
   );

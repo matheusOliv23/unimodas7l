@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const ContainerFormas = styled.div`
-  background: rgba(164, 164, 164, 0.05);
+  background: ${({ theme }) => theme.backgroundDark};
   height: auto;
-  border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,22 +33,29 @@ export const ContainerCards = styled.div`
 `;
 
 export const Card = styled.div`
+  color: ${({ theme }) => theme.textLight};
+  border-bottom: 2px solid ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: rgba(164, 164, 164, 0.1);
-  border: 1px solid #cccccc;
   height: 17rem;
+  width: 17rem;
   padding: 3.625rem 2rem;
   padding-right: 3rem;
   padding-left: 3rem;
   border-radius: 1.5rem;
   text-align: center;
+
+  &:hover {
+    background: ${({ theme }) => theme.backgroundDark};
+    cursor: pointer;
+  }
 `;
 
 export const Titulo = styled.h1`
-  color: black;
+  color: ${({ theme }) => theme.textLight};
   font-size: 2.5rem;
   margin-bottom: 1rem;
 
@@ -59,13 +65,13 @@ export const Titulo = styled.h1`
 `;
 
 export const Subtitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   /* margin-bottom: 0.75rem; */
 `;
 
 export const IconContainer = styled.div`
   display: block;
   margin-bottom: 1.5rem;
-  font-size: 5rem;
+  font-size: 3rem;
   color: ${({ theme }) => theme.primary};
 `;

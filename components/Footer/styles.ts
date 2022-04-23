@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerFooter = styled.footer`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 1rem;
@@ -13,11 +12,15 @@ export const ContainerFooter = styled.footer`
 
   background-color: ${({ theme }) => theme.backgroundDark};
   color: #fafafa;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const ContainerLogo = styled.footer`
   background-color: ${({ theme }) => theme.backgroundDark};
-  color: #fafafa;
   font-size: 0.7rem;
   padding: 2rem 0 2rem 0;
   display: flex;
@@ -41,4 +44,13 @@ export const IconFooter = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
+
+  a {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
+export const Titulo = styled.div`
+  font-weight: 700;
+  font-size: 1.1rem;
 `;

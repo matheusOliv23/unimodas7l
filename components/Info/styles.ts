@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  color: #fff;
-  background: #f9f9f9;
-
-  width: 100%;
+  background: ${({ theme }) => theme.backgroundDark};
+  color: ${({ theme }) => theme.textLight};
+  width: 60rem;
 
   @media screen and (max-width: 500px) {
     text-align: center;
@@ -34,7 +33,6 @@ export const Column1 = styled.div`
 `;
 
 export const Column2 = styled.div`
-  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +66,6 @@ export const Heading = styled.p`
   font-size: 48px;
   line-height: 1.2px;
   font-weight: 600;
-  color: black;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -81,7 +78,6 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 1.3rem;
   line-height: 2.3rem;
-  color: black;
 `;
 
 export const ButtonWrap = styled.div`

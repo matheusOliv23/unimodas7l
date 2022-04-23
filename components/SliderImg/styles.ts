@@ -25,6 +25,7 @@ export const Container = styled.section`
   background: transparent;
   overflow: hidden;
   color: ${({ theme }) => theme.textSlider};
+  background-color: ${({ theme }) => theme.backgroundDark};
 
   margin-top: -5rem;
 
@@ -68,15 +69,20 @@ export const Wrapper = styled.div<WrapperProps>`
 export const Slider = styled.div<SlideProps>`
   width: 100vw;
   height: 100vh;
+
+  max-width: 90rem;
   display: flex;
   align-items: center;
   background: ${({ theme }) => theme.backgroundSlider};
+
+  @media (min-width: 1200px) {
+    padding-left: 8rem;
+  }
 `;
 
 export const ImgContainer = styled.div`
-  width: 20rem;
-  height: 80%;
   flex: 1;
+  object-fit: cover;
 
   @media (max-width: 480px) {
     display: none;
@@ -85,6 +91,9 @@ export const ImgContainer = styled.div`
 
 export const Image = styled.img`
   height: 100%;
+  max-width: 20rem;
+  border-radius: 2px;
+  object-fit: cover;
 `;
 
 export const InfoContainer = styled.div`
@@ -97,7 +106,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  font-size: 3.125rem;
+  font-size: 1.8rem;
 `;
 export const Descricao = styled.p`
   margin: 3rem 0rem;

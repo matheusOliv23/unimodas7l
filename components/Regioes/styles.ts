@@ -41,8 +41,8 @@ export const RegioesCard = styled.div`
   align-items: center;
   justify-content: center;
   background: rgba(164, 164, 164, 0.1);
-  border: 1px solid #cccccc;
   height: 8rem;
+  width: 18rem;
   padding: 3.625rem 2rem;
   padding-right: 3rem;
   padding-left: 3rem;
@@ -80,7 +80,7 @@ export const RegioesTitulo = styled.h1`
 
 export const Titulo2 = styled.h3`
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 0.625rem;
 `;
 
@@ -115,4 +115,9 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+`;
+
+export const IconContainer = styled.div`
+  color: ${({ theme }) => theme.primary};
+  font-size: 1.4rem;
 `;

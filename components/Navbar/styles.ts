@@ -13,7 +13,6 @@ export const Container = styled.nav`
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  position: sticky;
   top: 0;
   z-index: 10;
 
@@ -68,7 +67,7 @@ export const ContainerButton = styled.div`
   }
 `;
 export const Logo = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #fff;
   justify-self: flex-start;
   display: flex;

@@ -6,7 +6,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     ::-webkit-scrollbar {
       width: 8px;
       height: 5px;
@@ -16,17 +16,18 @@ export default createGlobalStyle`
       border-radius: 10px;
     }
     ::-webkit-scrollbar-track{
-      background: ${({ theme }) => lighten(0.4, theme.primary)};
+       background-color: ${({ theme }) => theme.backgroundDark};
     }
   }
   body, html {
     width: 100%;
     height: 100%;
-    /* background: ${({ theme }) => theme.backgroundDark}; */
+    color: ${({ theme }) => theme.textLight};   
+    background: ${({ theme }) => theme.backgroundDark};
   }
   body {  
     background-color:#fff ;
-    font: 400 1rem 'Open Sans', sans-serif;
+    font: 400 1rem 'Poppins', sans-serif;
     color: black;
   }
   img {
@@ -49,7 +50,7 @@ export default createGlobalStyle`
     max-width: 85rem;
     padding: 0 1rem;
     @media(max-width:1450px) {
-      max-width: 70rem;
+      max-width: 60rem;
     }
     @media(max-width:1000px) {
       max-width: 50rem;

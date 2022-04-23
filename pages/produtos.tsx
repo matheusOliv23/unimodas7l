@@ -21,7 +21,7 @@ export default function produtos({ roupas }) {
     <Layout handleToggle={handleToggle}>
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
 
-      <FiltroProdutos />
+      <FiltroProdutos roupas={roupas} />
     </Layout>
   );
 }

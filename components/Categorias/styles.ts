@@ -12,7 +12,7 @@ export const Container = styled.section`
 
   gap: 4rem;
   height: auto;
-  background-color: black;
+  background-color: ${({ theme }) => theme.backgroundDark};
 `;
 
 export const ContainerImagens = styled.div`
@@ -22,6 +22,7 @@ export const ContainerImagens = styled.div`
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
+  gap: 1.5rem;
 `;
 export const ImgBox = styled.div`
   width: 12.5rem;
@@ -38,7 +39,7 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 export const ContainerCategoria = styled.div`
-  background-color: #fff;
+  background-color: #1a1a1b;
   position: relative;
   max-width: 18.75rem;
   height: 18.25rem;
@@ -49,8 +50,12 @@ export const ContainerCategoria = styled.div`
   transition: 0.5s ease-in-out;
   border-radius: 0.7rem;
 
+  &:hover {
+    background-color: ${({ theme }) => theme.backgroundDark};
+  }
+
   /* height: 70vh; */
-  /* 
+  /*
   &:hover {
     opacity: 0.8;
     height: 25rem;
@@ -69,6 +74,7 @@ export const InfoCategorias = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  color: #111;
+  color: ${({ theme }) => theme.textLight};
+  font-weight: bold;
   margin-top: 50px;
 `;
