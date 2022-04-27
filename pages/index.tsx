@@ -36,16 +36,18 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
   };
 
   return (
-    <div>
-      <Navbar handleToggle={handleToggle} />
-      <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
-      <SliderImg sliders={sliders} />
-      <Categorias categorias={categorias} />
+    <>
+      <main className="container">
+        <Navbar handleToggle={handleToggle} />
+        <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
+        <SliderImg sliders={sliders} />
+        <Categorias categorias={categorias} />
 
-      <FormasPagamento />
-      <Regioes />
+        <FormasPagamento />
+        <Regioes />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

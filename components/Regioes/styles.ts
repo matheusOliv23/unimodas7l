@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: #fff;
-  background: #010606;
+  background: ${({ theme }) => theme.backgroundDark2};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const RegioesWraper = styled.div`
   padding: 0 50px;
 
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media screen and (max-width: 768px) {

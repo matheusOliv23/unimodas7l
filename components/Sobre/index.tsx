@@ -9,12 +9,6 @@ interface SobreProps {
 export default function SobreNos() {
   return (
     <Container>
-      <div>
-        <h1>Onde estamos</h1>
-        <p>Estamos situados no Shopping de Sete Lagoas em Minas Gerais</p>
-        <p>Avenida Otávio Campelo Ribeiro nº 2801, Eldorado</p>
-      </div>
-
       <ContainerCards>
         <Card>
           <Subtitle>Missão</Subtitle>

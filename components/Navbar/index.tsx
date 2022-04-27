@@ -34,9 +34,6 @@ function Navbar({ handleToggle }: NavbarProps) {
           <Navlink titulo="Sobre nós" rota="/sobre" />
           <Navlink titulo="Looks" rota="/produtos" />
         </NavMenu>
-        <ContainerButton>
-          <Button link="/crediario">Entre em contato</Button>
-        </ContainerButton>
       </NavbarContainer>
     </Container>
   );

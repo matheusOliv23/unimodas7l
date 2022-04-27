@@ -21,7 +21,16 @@ export default function produtos({ roupas }) {
     <Layout handleToggle={handleToggle}>
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
 
-      <FiltroProdutos roupas={roupas} />
+      <div
+        style={{
+          backgroundColor: "#1a1a1b",
+          padding: "2rem",
+          marginBottom: "3rem",
+          marginTop: "1rem",
+        }}
+      >
+        <FiltroProdutos roupas={roupas} />
+      </div>
     </Layout>
   );
 }

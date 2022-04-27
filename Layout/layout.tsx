@@ -1,5 +1,6 @@
 import { ReactNode, useState } from "react";
 import Footer from "../components/Footer";
+import FooterLayout from "../components/Footer/FooterLayout";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
@@ -11,9 +12,10 @@ interface ILayout {
 export default function Layout({ children, handleToggle }: ILayout) {
   return (
     <>
-      <Navbar handleToggle={handleToggle} />
-      <div>{children}</div>
-
+      <main className="container">
+        <Navbar handleToggle={handleToggle} />
+        <div>{children}</div>
+      </main>
       <Footer />
     </>
   );

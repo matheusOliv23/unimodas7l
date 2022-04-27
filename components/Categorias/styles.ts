@@ -12,7 +12,7 @@ export const Container = styled.section`
 
   gap: 4rem;
   height: auto;
-  background-color: ${({ theme }) => theme.backgroundDark};
+  background-color: ${({ theme }) => theme.backgroundDark2};
 `;
 
 export const ContainerImagens = styled.div`

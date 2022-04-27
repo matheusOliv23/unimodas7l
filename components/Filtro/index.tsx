@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CardProdutos from "../CardProdutos";
 import {
   Container,
   Filtro,
@@ -24,7 +25,9 @@ export default function FiltroProdutos({ roupas }: Props) {
   function SearchFilter() {
     if (filterResults === "Roupas") {
       const roupasFiltradas = roupas.map((roupa, index) => (
-        <div key={index}>{roupa.titulo}</div>
+        <div key={index}>
+          <CardProdutos img={roupa.img} nome={roupa.titulo} />
+        </div>
       ));
       return roupasFiltradas;
     } else if (filterResults === "Sapatos") {
@@ -45,15 +48,9 @@ export default function FiltroProdutos({ roupas }: Props) {
             <Option value="Sapatos">Sapatos</Option>
             <Option value="Bolsas">Bolsas</Option>
           </Select>
-          {console.log(filterResults)}
-          {SearchFilter()}
-        </Filtro>
-        <Filtro>
-          <Select>
-            <Option selected>Recentes</Option>
-          </Select>
         </Filtro>
       </FiltroContainer>
+      {SearchFilter()}
     </Container>
   );
 }

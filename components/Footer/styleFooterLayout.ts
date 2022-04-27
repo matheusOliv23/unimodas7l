@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   display: flex;
@@ -7,6 +7,7 @@ export const ContainerFooter = styled.footer`
   width: 100%;
   padding: 1rem;
   text-decoration: none;
+  position: absolute;
 
   bottom: 0;
 

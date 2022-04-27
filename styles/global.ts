@@ -7,6 +7,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+  
     ::-webkit-scrollbar {
       width: 8px;
       height: 5px;
@@ -25,10 +26,8 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.textLight};   
     background: ${({ theme }) => theme.backgroundDark};
   }
-  body {  
-    background-color:#fff ;
-    font: 400 1rem 'Poppins', sans-serif;
-    color: black;
+  body {
+    font: 400 1rem 'Poppins', sans-serif;  
   }
   img {
     width: 100%;
@@ -46,17 +45,11 @@ export default createGlobalStyle`
   }
   .container {
     width: 100%;
-    margin: 0 auto;
-    max-width: 85rem;
-    padding: 0 1rem;
-    @media(max-width:1450px) {
-      max-width: 60rem;
-    }
-    @media(max-width:1000px) {
-      max-width: 50rem;
-    }
-    @media(max-width:700px) {
-      padding: 0 2rem;
-    }
+    margin: 0 auto;   
+    
+    @media(min-width:1450px) {
+      max-width: 80rem;
+    }  
+    
   }
 `;

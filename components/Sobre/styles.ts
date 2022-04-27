@@ -5,6 +5,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  background: #010606;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
 `;
 
 export const ContainerCards = styled.div`
@@ -19,21 +22,28 @@ export const ContainerCards = styled.div`
 `;
 
 export const Card = styled.div`
+  color: ${({ theme }) => theme.textLight};
+  border-bottom: 2px solid ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: rgba(164, 164, 164, 0.1);
-  border: 1px solid #cccccc;
-  height: 17rem;
+  max-height: 20rem;
   padding: 3.625rem 2rem;
   padding-right: 3rem;
   padding-left: 3rem;
   border-radius: 1.5rem;
   text-align: center;
-  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  &:hover {
+    background: ${({ theme }) => theme.backgroundDark};
+    cursor: pointer;
+  }
 `;
 
 export const Subtitle = styled.h3`
   font-size: 1.5rem;
+  text-transform: uppercase;
 `;

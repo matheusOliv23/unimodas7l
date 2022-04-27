@@ -66,6 +66,7 @@ export const Titulo = styled.h1`
 
 export const Subtitle = styled.h3`
   font-size: 1.1rem;
+  text-align: center;
   /* margin-bottom: 0.75rem; */
 `;
 
