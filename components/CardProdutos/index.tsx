@@ -1,5 +1,12 @@
 import React from "react";
-import { ContainerProduto, Image } from "./styles";
+import {
+  ContainerCategoria,
+  ContainerProduto,
+  Image,
+  ImgBox,
+  InfoCategorias,
+  Titulo,
+} from "./styles";
 
 interface ProdutoProps {
   nome: string;
@@ -9,9 +16,14 @@ interface ProdutoProps {
 
 export default function CardProdutos({ nome, img, preco }: ProdutoProps) {
   return (
-    <ContainerProduto>
-      <Image src={img} alt={nome} />
-      <div>{nome}</div>
-    </ContainerProduto>
+    <ContainerCategoria>
+      <ImgBox>
+        <Image src={img} />
+      </ImgBox>
+      <InfoCategorias>
+        <Titulo>{nome}</Titulo>
+        <div>De 20,99 para 80,90</div>
+      </InfoCategorias>
+    </ContainerCategoria>
   );
 }

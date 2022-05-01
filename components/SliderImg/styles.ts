@@ -19,7 +19,7 @@ interface SlideProps {
 
 export const Container = styled.section`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   position: relative;
   background: transparent;
