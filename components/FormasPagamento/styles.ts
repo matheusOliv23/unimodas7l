@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ContainerFormas = styled.div`
-  background: ${({ theme }) => theme.backgroundDark};
+  //background: ${({ theme }) => theme.backgroundDark};
+  background: white;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,8 @@ export const ContainerCards = styled.div`
 `;
 
 export const Card = styled.div`
-  color: ${({ theme }) => theme.textLight};
+  //color: ${({ theme }) => theme.textLight};
+  color: black;
   border-bottom: 2px solid ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
@@ -50,6 +52,7 @@ export const Card = styled.div`
 
   &:hover {
     background: ${({ theme }) => theme.backgroundDark};
+    color: white;
     cursor: pointer;
   }
 `;

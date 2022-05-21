@@ -11,6 +11,9 @@ import Footer from "../components/Footer";
 import Info from "../components/Info";
 import Regioes from "../components/Regioes";
 import FormasPagamento from "../components/FormasPagamento";
+import CarouselImg from "../components/CarouselImg";
+import Hero from "../components/Hero";
+import Novidades from "../components/Novidades";
 
 interface ISlider {
   titulo: string;
@@ -37,10 +40,13 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
 
   return (
     <>
+      <Navbar handleToggle={handleToggle} />
       <main className="container">
-        <Navbar handleToggle={handleToggle} />
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
-        <SliderImg sliders={sliders} />
+        {/* <Hero sliders={sliders} /> */}
+        <Novidades />
+        {/* <CarouselImg sliders={sliders} /> */}
+        {/* <SliderImg sliders={sliders} /> */}
         <Categorias categorias={categorias} />
 
         <FormasPagamento />

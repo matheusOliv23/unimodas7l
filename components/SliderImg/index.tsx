@@ -12,6 +12,8 @@ import {
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useState } from "react";
 import Button from "../../styles/Button";
+import SimpleImageSlider from "react-simple-image-slider";
+import { important } from "polished";
 
 interface ISlider {
   titulo: string;
@@ -26,7 +28,6 @@ interface SliderProps {
 function SliderImg({ sliders }: SliderProps) {
   const [slideIndex, setSlideIndex] = useState(0);
 
-
   function handleClick(direction: string) {
     if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
@@ -35,7 +36,25 @@ function SliderImg({ sliders }: SliderProps) {
     }
   }
 
+  const images = [{ url: "model5.jpeg" }, { url: "model6.jpeg" }];
+
   return (
+    // <div>
+    //   <Container>
+    //     <ImgContainer>
+    //       <SimpleImageSlider
+    //         width="100%"
+    //         height={800}
+    //         images={images}
+    //         showBullets={true}
+    //         showNavs={true}
+    //         autoPlay
+    //         autoPlayDelay={4}
+    //         bgColor="white"
+    //       />
+    //     </ImgContainer>
+    //   </Container>
+    // </div>
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <AiOutlineArrowLeft />
@@ -43,20 +62,16 @@ function SliderImg({ sliders }: SliderProps) {
       <Wrapper sliderIndex={slideIndex}>
         {sliders.map((item, index) => (
           <Slider key={index}>
+            <Descricao>{item.descricao}</Descricao>
             <ImgContainer>
-              {/* <Image
-            layout="responsive"
-            width="80%"
-            height="100%"
-            src="/model3.jpeg"
-          /> */}
               <Image src={item.img} />
             </ImgContainer>
-            <InfoContainer>
+            <Descricao>{item.descricao}</Descricao>
+            {/* <InfoContainer>
               <Titulo>{item.titulo}</Titulo>
               <Descricao>{item.descricao}</Descricao>
               <Button link="/">CONFIRA</Button>
-            </InfoContainer>
+            </InfoContainer> */}
           </Slider>
         ))}
       </Wrapper>

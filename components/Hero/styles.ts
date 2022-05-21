@@ -68,12 +68,11 @@ export const Wrapper = styled.div<WrapperProps>`
 `;
 
 export const Slider = styled.div<SlideProps>`
-  width: 100vw;
-  max-height: 10rem;
+  max-height: 15rem;
+  width: 100%;
 
   flex-direction: column;
 
-  max-width: 90rem;
   display: flex;
   align-items: center;
   background: ${({ theme }) => theme.backgroundSlider};
@@ -87,7 +86,7 @@ export const ImgContainer = styled.div`
   object-fit: cover;
   max-width: 100%;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-size: cover !important;
 `;
 
@@ -114,9 +113,11 @@ export const Titulo = styled.h1`
 export const Descricao = styled.p`
   font-size: 1.5rem;
   font-weight: 500;
-  background-color: yellow;
+  background-color: red;
   width: 100%;
   text-align: center;
+  padding: 1rem;
+  height: 4rem;
 `;
 export const Button = styled.button`
   padding: 0.8rem;

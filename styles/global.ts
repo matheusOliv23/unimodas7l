@@ -24,7 +24,7 @@ export default createGlobalStyle`
     width: 100%;
     height: 100%;
     color: ${({ theme }) => theme.textLight};   
-    background: ${({ theme }) => theme.backgroundDark};
+    //background: ${({ theme }) => theme.backgroundDark};
   }
   body {
     font: 400 1rem 'Poppins', sans-serif;  
@@ -47,8 +47,9 @@ export default createGlobalStyle`
     width: 100%;
     margin: 0 auto;   
     
-    @media(min-width:1450px) {
-      max-width: 80rem;
+    @media(min-width:2200px) {
+      margin: 0 auto;
+      max-width: 90rem;
     }  
     
   }
