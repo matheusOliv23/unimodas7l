@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import {
+  Buttons,
   CarouselImg,
   Container,
   ContainerProdutos,
@@ -11,7 +12,6 @@ import {
   OldPrice,
   Price,
 } from "./styles";
-
 
 interface IRoupas {
   name: string;
@@ -25,10 +25,22 @@ interface ComponentProps {
 }
 
 export default function index({ roupas }: ComponentProps) {
+  const carousel = useRef(null);
+
+  const handleLeftClick = (e: any) => {
+    e.preventDefault();
+    console.log(carousel.current.offsetWidth);
+    carousel.current.scrollLeft -= carousel.current.offsetWidth + 100;
+  };
+  const handleRightClick = (e: any) => {
+    e.preventDefault();
+    console.log(carousel.current.offsetWidth);
+    carousel.current.scrollLeft += carousel.current.offsetWidth + 100;
+  };
   return (
     <Container>
       <ContainerProdutos>
-        <CarouselImg>
+        <CarouselImg ref={carousel}>
           {roupas.map((item, index) => (
             <Item key={index}>
               <Img>
@@ -42,6 +54,14 @@ export default function index({ roupas }: ComponentProps) {
             </Item>
           ))}
         </CarouselImg>
+        <Buttons>
+          <button onClick={handleLeftClick}>
+            <img src="/static/right_icon.png" alt="Seta esquerda" />
+          </button>
+          <button onClick={handleRightClick}>
+            <img src="/static/right_icon.png" alt="Seta direita" />
+          </button>
+        </Buttons>
       </ContainerProdutos>
     </Container>
   );
