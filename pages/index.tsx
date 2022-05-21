@@ -26,12 +26,25 @@ interface ICategorias {
   img: string;
 }
 
+
+interface IRoupas {
+  name: string;
+  img: string;
+  price: string;
+  oldPrice: string;
+}
+
 interface ComponentesProps {
   sliders: ISlider[];
   categorias: ICategorias[];
+  roupas: IRoupas[];
 }
 
-export default function Home({ sliders, categorias }: ComponentesProps) {
+export default function Home({
+  sliders,
+  categorias,
+  roupas,
+}: ComponentesProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -44,7 +57,7 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
       <main className="container">
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
         {/* <Hero sliders={sliders} /> */}
-        <Novidades />
+        <Novidades roupas={roupas} />
         {/* <CarouselImg sliders={sliders} /> */}
         {/* <SliderImg sliders={sliders} /> */}
         <Categorias categorias={categorias} />
@@ -70,6 +83,19 @@ export const getStaticProps: GetStaticProps = async () => {
     { orderings: "[document.first_publication_date desc]" }
   );
 
+  const roupasResponse = await prismic.query(
+    [Prismic.Predicates.at("document.type", "roupas")],
+    { orderings: "[document.first_publication_date desc]" }
+  );
+
+  const roupas = roupasResponse.results.map((roupa) => ({
+    id: roupa.uid,
+    name: roupa.data.name,
+    img: roupa.data.img.url,
+    price: roupa.data.preco,
+    oldPrice: roupa.data.precoantigo,
+  }));
+
   const sliders = projectResponse.results.map((slider) => ({
     id: slider.uid,
     titulo: slider.data.titulo,
@@ -84,7 +110,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }));
 
   return {
-    props: { categorias, sliders },
+    props: { categorias, sliders, roupas },
     revalidate: 86400, //conteúdo vai revalidar a cada 24h
   };
 };

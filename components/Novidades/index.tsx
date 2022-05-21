@@ -12,24 +12,35 @@ import {
   Price,
 } from "./styles";
 
-export default function index() {
+
+interface IRoupas {
+  name: string;
+  img: string;
+  price: string;
+  oldPrice: string;
+}
+
+interface ComponentProps {
+  roupas: IRoupas[];
+}
+
+export default function index({ roupas }: ComponentProps) {
   return (
     <Container>
       <ContainerProdutos>
         <CarouselImg>
-          <Item>
-            <Img>
-              <img
-                src="https://imgcentauro-a.akamaihd.net/230x230/93828502.jpg"
-                alt="Tenis"
-              />
-            </Img>
-            <Info>
-              <Name>Tenis</Name>
-              <OldPrice>30</OldPrice>
-              <Price>17</Price>
-            </Info>
-          </Item>
+          {roupas.map((item, index) => (
+            <Item key={index}>
+              <Img>
+                <img src={item.img} alt={item.name} />
+              </Img>
+              <Info>
+                <Name>{item.name}</Name>
+                <OldPrice>{item.oldPrice}</OldPrice>
+                <Price>{item.price}</Price>
+              </Info>
+            </Item>
+          ))}
         </CarouselImg>
       </ContainerProdutos>
     </Container>
