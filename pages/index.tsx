@@ -56,7 +56,7 @@ export default function Home({
       <Navbar handleToggle={handleToggle} />
       <main className="container">
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
-        {/* <Hero sliders={sliders} /> */}
+        <Hero indicators interval={5000} sliders={sliders} />
         <Novidades roupas={roupas} />
         {/* <CarouselImg sliders={sliders} /> */}
         {/* <SliderImg sliders={sliders} /> */}

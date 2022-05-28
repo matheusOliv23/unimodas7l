@@ -1,126 +1,53 @@
 import { lighten } from "polished";
 import styled from "styled-components";
 
-interface DirectionProps {
-  direction?: string;
-}
-
-interface ImgProps {
-  imgUrl?: string;
-}
-
-interface WrapperProps {
-  sliderIndex: number;
-}
-
-interface SlideProps {
-  bgColor?: string;
+interface CarouselProps {
+  isActive: boolean;
 }
 
 export const Container = styled.section`
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  position: relative;
-  background: transparent;
+  align-items: center;
+  justify-content: center;
+  background: #d0d3d4;
+`;
+
+export const Carousel = styled.div`
+  margin: 0 auto;
   overflow: hidden;
-  color: ${({ theme }) => theme.textSlider};
-  //background-color: ${({ theme }) => theme.backgroundDark};
+  max-width: 1100px;
+`;
+export const CarouselInner = styled.div`
+  white-space: nowrap;
+  transition: ease 1s;
+`;
 
-  background-color: white;
-  /* margin-top: -5rem;
+export const CarouselContent = styled.div`
+  display: inline-block;
+  width: 100%;
 
-  @media (max-width: 480px) {
-    margin-top: -5rem;
+  /* img {
+    max-width: 20rem;
   } */
 `;
 
-export const Arrow = styled.div<DirectionProps>`
-  width: 3.125rem;
-  height: 3.125rem;
-  background-color: ${({ theme }) => theme.backgroundDark};
-  color: ${({ theme }) => theme.primary};
-  font-size: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  z-index: 2;
-
+export const CarouselIndicator = styled.div`
   position: absolute;
-  top: 50%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 2;
+`;
 
+export const CarouselButtonItem = styled.button<CarouselProps>`
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  background: #fff;
+  opacity: ${(props) => (props.isActive ? 1 : 0.5)};
+  margin: 0.2rem;
   cursor: pointer;
-
-  right: ${(props) => props.direction === "right" && "20px"};
-  left: ${(props) => props.direction === "left" && "20px"};
-
-  &:hover {
-    color: ${({ theme }) => lighten(0.3, theme.primary)};
-  }
-`;
-
-export const Wrapper = styled.div<WrapperProps>`
-  height: 100%;
-  transform: translateX(${(props) => props.sliderIndex * -100}vw);
-  display: flex;
-  transition: all 1.5s ease;
-`;
-
-export const Slider = styled.div<SlideProps>`
-  max-height: 15rem;
-  width: 100%;
-
-  flex-direction: column;
-
-  display: flex;
-  align-items: center;
-  background: ${({ theme }) => theme.backgroundSlider};
-  /* 
-  @media (min-width: 1200px) {
-    padding-left: 8rem;
-  } */
-`;
-
-export const ImgContainer = styled.div`
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
-  height: 90vh;
-  background-size: cover !important;
-`;
-
-export const Image = styled.img`
-  max-height: 100%;
-  width: 100%;
-  height: 70vh;
-  border-radius: 2px;
-  object-fit: cover;
-`;
-
-export const InfoContainer = styled.div`
-  flex: 1;
-  padding: 3.125rem;
-
-  @media (max-width: 480px) {
-    text-align: center;
-  }
-`;
-
-export const Titulo = styled.h1`
-  font-size: 1.8rem;
-`;
-export const Descricao = styled.p`
-  font-size: 1.5rem;
-  font-weight: 500;
-  background-color: red;
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-  height: 4rem;
-`;
-export const Button = styled.button`
-  padding: 0.8rem;
-  background: transparent;
-  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
 `;

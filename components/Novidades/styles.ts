@@ -12,13 +12,9 @@ export const Container = styled.section`
 export const ContainerProdutos = styled.div`
   max-width: 100vw;
 
-  /* @media (min-width: 500px) {
-    max-width: 90vw;
-  }
-
   @media (min-width: 1200px) {
     max-width: 75vw;
-  } */
+  }
 `;
 
 export const CarouselImg = styled.div`

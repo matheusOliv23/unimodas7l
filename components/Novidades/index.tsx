@@ -48,8 +48,8 @@ export default function index({ roupas }: ComponentProps) {
               </Img>
               <Info>
                 <Name>{item.name}</Name>
-                <OldPrice>{item.oldPrice}</OldPrice>
-                <Price>{item.price}</Price>
+                <OldPrice>R$ {item.oldPrice}</OldPrice>
+                <Price>R$ {item.price}</Price>
               </Info>
             </Item>
           ))}
