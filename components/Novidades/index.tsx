@@ -7,6 +7,7 @@ import {
   ContainerProdutos,
   Img,
   Info,
+  Installment,
   Item,
   Name,
   OldPrice,
@@ -39,6 +40,9 @@ export default function index({ roupas }: ComponentProps) {
   };
   return (
     <Container>
+      <div style={{ color: "black", fontSize: "1.4rem" }}>
+        Veja nossas melhores ofertas aqui
+      </div>
       <ContainerProdutos>
         <CarouselImg ref={carousel}>
           {roupas.map((item, index) => (
@@ -49,7 +53,10 @@ export default function index({ roupas }: ComponentProps) {
               <Info>
                 <Name>{item.name}</Name>
                 <OldPrice>R$ {item.oldPrice}</OldPrice>
-                <Price>R$ {item.price}</Price>
+                <Price>Por R$ {item.price}</Price>
+                <Installment>
+                  Até <strong>12x</strong> de <strong>R$ 99,90</strong>
+                </Installment>
               </Info>
             </Item>
           ))}

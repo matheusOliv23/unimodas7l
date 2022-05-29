@@ -12,7 +12,8 @@ export const Container = styled.section`
 
   gap: 4rem;
   height: auto;
-  background-color: ${({ theme }) => theme.backgroundDark2};
+  background: #d0d3d4;
+  //background-color: ${({ theme }) => theme.backgroundDark2};
 `;
 
 export const ContainerImagens = styled.div`
@@ -35,11 +36,12 @@ export const ImgBox = styled.div`
 
 export const Image = styled.img`
   max-width: 14rem;
+  height: 17.5rem;
   border-radius: 2px;
   object-fit: cover;
 `;
 export const ContainerCategoria = styled.div`
-  background-color: #1a1a1b;
+  //background-color: #062631;
   position: relative;
   max-width: 18.75rem;
   height: 18.25rem;
@@ -50,9 +52,9 @@ export const ContainerCategoria = styled.div`
   transition: 0.5s ease-in-out;
   border-radius: 0.7rem;
 
-  &:hover {
+  /* &:hover {
     background-color: ${({ theme }) => theme.backgroundDark};
-  }
+  } */
 
   /* height: 70vh; */
   /*
@@ -77,4 +79,7 @@ export const Titulo = styled.h1`
   color: ${({ theme }) => theme.textLight};
   font-weight: bold;
   margin-top: 50px;
+  z-index: 2;
+  background-color: purple;
+  padding: 0.5rem 1rem;
 `;

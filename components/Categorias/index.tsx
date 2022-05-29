@@ -24,7 +24,6 @@ export default function Categorias({ categorias }: CategoriasProp) {
           <CategoriaItem key={index} item={item} />
         ))}
       </ContainerImagens>
-      <Button link="/produtos">Veja Mais</Button>
     </Container>
   );
 }

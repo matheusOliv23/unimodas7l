@@ -16,7 +16,6 @@ export const Container = styled.nav`
   top: 0;
   z-index: 10;
   position: sticky;
-  font-family: "Poppins", sans-serif;
 
   background-color: ${({ theme }) => theme.backgroundDark};
 

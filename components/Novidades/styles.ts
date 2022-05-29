@@ -2,19 +2,20 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #e1e1e1;
 `;
 
 export const ContainerProdutos = styled.div`
   max-width: 100vw;
 
-  @media (min-width: 1200px) {
+  /* @media (min-width: 1200px) {
     max-width: 75vw;
-  }
+  } */
 `;
 
 export const CarouselImg = styled.div`
@@ -61,24 +62,28 @@ export const Info = styled.div`
 `;
 
 export const Name = styled.span`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin: 0.625rem 0;
-  color: blue !important;
+  margin: 0.2rem 0;
+  color: #000000 !important;
 `;
 
 export const OldPrice = styled.span`
   font-size: 1rem;
   text-decoration: line-through;
   flex-grow: 1;
-  color: #e81a5d !important ;
+  color: black !important ;
 `;
 
 export const Price = styled.span`
-  margin-top: 0.625rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #ff7e3b;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #16141b;
+  color: white !important;
+`;
+
+export const Installment = styled.span`
+  color: black !important;
 `;
 
 export const Buttons = styled.div`

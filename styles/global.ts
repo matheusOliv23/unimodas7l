@@ -6,7 +6,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   
     ::-webkit-scrollbar {
       width: 8px;
@@ -27,7 +27,7 @@ export default createGlobalStyle`
     //background: ${({ theme }) => theme.backgroundDark};
   }
   body {
-    font: 400 1rem 'Poppins', sans-serif;  
+    font: 400 1rem 'Montserrat', sans-serif;  
   }
   img {
     width: 100%;
