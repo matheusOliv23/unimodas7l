@@ -54,9 +54,23 @@ export default function Home({
   return (
     <>
       <Navbar handleToggle={handleToggle} />
+      {/* <div
+        style={{
+          color: "#00000",
+          background: "#fb8c00",
+          padding: "0.6rem",
+          textAlign: "center",
+          fontSize: "2rem",
+          letterSpacing: "0.3rem",
+          fontWeight: "bold",
+        }}
+      >
+        Ofertas imperdíveis!
+      </div> */}
+      <Hero indicators interval={5000} sliders={sliders} />
       <main className="container">
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
-        <Hero indicators interval={5000} sliders={sliders} />
+
         <Novidades roupas={roupas} />
         {/* <CarouselImg sliders={sliders} /> */}
         {/* <SliderImg sliders={sliders} /> */}
