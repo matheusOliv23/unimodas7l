@@ -22,14 +22,15 @@ export const ContainerTitulo = styled.div`
 `;
 
 export const ContainerCards = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
-
+  flex-wrap: wrap;
+  /* 
   @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
-  }
+  } */
 `;
 
 export const Card = styled.div`

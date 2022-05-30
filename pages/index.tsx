@@ -57,13 +57,13 @@ export default function Home({
       <Hero indicators interval={5000} sliders={sliders} />
       <Novidades roupas={roupas} />
       <Categorias categorias={categorias} />
+      <FormasPagamento />
       <main className="container">
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
 
         {/* <CarouselImg sliders={sliders} /> */}
         {/* <SliderImg sliders={sliders} /> */}
 
-        <FormasPagamento />
         <Regioes />
       </main>
       <Footer />

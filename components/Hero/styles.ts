@@ -54,7 +54,7 @@ export const CarouselIndicator = styled.div`
   bottom: 1.5rem;
   z-index: 2;
   padding-bottom: 0.8rem;
-  top: 88%;
+  top: 70%;
 `;
 
 export const CarouselButtonItem = styled.button<CarouselProps>`
@@ -66,7 +66,7 @@ export const CarouselButtonItem = styled.button<CarouselProps>`
   margin: 0.2rem;
   cursor: pointer;
   border-radius: 50%;
-  cursor: pointer;
+
   padding: 0.1rem;
 `;
 
@@ -113,4 +113,5 @@ export const ItemButton = styled.button`
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   border: none;
+  font-size: 1.5rem;
 `;
