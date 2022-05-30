@@ -21,7 +21,11 @@ const services = [
   },
   {
     icon: <Icon icon="bi:credit-card-fill" />,
-    titulo: "Cartões Cabal, Elo, Maestro, Master, Hiper, Visa, VR",
+    titulo: "Parcelamos no cartão de crédito",
+  },
+  {
+    icon: <Icon icon="bi:credit-card-fill" />,
+    titulo: "Atendimento via Whatsapp",
   },
 ];
 

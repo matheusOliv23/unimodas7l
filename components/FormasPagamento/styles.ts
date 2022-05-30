@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ContainerFormas = styled.div`
-  background: ${({ theme }) => theme.backgroundDark};
+  //background: ${({ theme }) => theme.backgroundDark};
+  background-color: #e1e1e1;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -10,7 +11,6 @@ export const ContainerFormas = styled.div`
   gap: 4rem;
   padding: 1rem;
   margin-bottom: 2rem;
-
   padding-top: 6rem;
   padding-bottom: 6rem;
 `;
@@ -22,24 +22,27 @@ export const ContainerTitulo = styled.div`
 `;
 
 export const ContainerCards = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
-
+  flex-wrap: wrap;
+  /* 
   @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
-  }
+  } */
 `;
 
 export const Card = styled.div`
   color: ${({ theme }) => theme.textLight};
+  //color: black;
   border-bottom: 2px solid ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(164, 164, 164, 0.1);
+  //background: rgba(164, 164, 164, 0.1);
+  background-color: black;
   height: 17rem;
   width: 17rem;
   padding: 3.625rem 2rem;
@@ -50,12 +53,14 @@ export const Card = styled.div`
 
   &:hover {
     background: ${({ theme }) => theme.backgroundDark};
+    color: white;
     cursor: pointer;
   }
 `;
 
 export const Titulo = styled.h1`
-  color: ${({ theme }) => theme.textLight};
+  //color: ${({ theme }) => theme.textLight};
+  color: black;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 

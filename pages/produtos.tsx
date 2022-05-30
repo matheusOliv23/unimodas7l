@@ -45,8 +45,10 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const roupas = roupasResponse.results.map((roupa) => ({
     id: roupa.uid,
+    name: roupa.data.name,
     img: roupa.data.img.url,
-    titulo: roupa.data.titulo,
+    price: roupa.data.preco,
+    oldPrice: roupa.data.precoantigo,
   }));
 
   return {

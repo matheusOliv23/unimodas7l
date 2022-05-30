@@ -11,8 +11,10 @@ import {
 } from "./styles";
 
 interface IRoupas {
-  titulo?: string;
+  name: string;
   img: string;
+  price: string;
+  oldPrice: string;
 }
 
 interface Props {
@@ -26,7 +28,7 @@ export default function FiltroProdutos({ roupas }: Props) {
     if (filterResults === "Roupas") {
       const roupasFiltradas = roupas.map((roupa, index) => (
         <div key={index}>
-          <CardProdutos img={roupa.img} nome={roupa.titulo} />
+          <CardProdutos img={roupa.img} nome={roupa.name} />
         </div>
       ));
       return roupasFiltradas;

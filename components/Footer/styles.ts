@@ -2,20 +2,47 @@ import styled from 'styled-components';
 
 export const ContainerFooter = styled.footer`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+
   width: 100%;
-  padding: 1rem;
   text-decoration: none;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 
   bottom: 0;
+  background: #d0d3d4;
+  //background-color: ${({ theme }) => theme.backgroundDark};
+  color: black;
 
-  background-color: ${({ theme }) => theme.backgroundDark};
-  color: #fafafa;
-
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     flex-direction: column;
     text-align: center;
+  } */
+`;
+
+export const ContainerLinks = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 600px) {
+    text-align: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+`;
+
+export const Titulo = styled.h1`
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: start;
+  color: #062631;
+
+  @media (max-width: 600px) {
+    text-align: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
   }
 `;
 
@@ -39,19 +66,22 @@ export const LogoFooter = styled.div`
 `;
 
 export const IconFooter = styled.div`
-  padding: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
 
   a {
-    color: ${({ theme }) => theme.primary};
+    color: #062631;
   }
 `;
 
-export const Titulo = styled.div`
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-align: center;
+export const FooterRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: black;
+  a {
+    color: black;
+  }
 `;

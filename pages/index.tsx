@@ -11,6 +11,9 @@ import Footer from "../components/Footer";
 import Info from "../components/Info";
 import Regioes from "../components/Regioes";
 import FormasPagamento from "../components/FormasPagamento";
+import CarouselImg from "../components/CarouselImg";
+import Hero from "../components/Hero";
+import Novidades from "../components/Novidades";
 
 interface ISlider {
   titulo: string;
@@ -23,12 +26,25 @@ interface ICategorias {
   img: string;
 }
 
+
+interface IRoupas {
+  name: string;
+  img: string;
+  price: string;
+  oldPrice: string;
+}
+
 interface ComponentesProps {
   sliders: ISlider[];
   categorias: ICategorias[];
+  roupas: IRoupas[];
 }
 
-export default function Home({ sliders, categorias }: ComponentesProps) {
+export default function Home({
+  sliders,
+  categorias,
+  roupas,
+}: ComponentesProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -37,13 +53,17 @@ export default function Home({ sliders, categorias }: ComponentesProps) {
 
   return (
     <>
+      <Navbar handleToggle={handleToggle} />
+      <Hero indicators interval={5000} sliders={sliders} />
+      <Novidades roupas={roupas} />
+      <Categorias categorias={categorias} />
+      <FormasPagamento />
       <main className="container">
-        <Navbar handleToggle={handleToggle} />
         <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
-        <SliderImg sliders={sliders} />
-        <Categorias categorias={categorias} />
 
-        <FormasPagamento />
+        {/* <CarouselImg sliders={sliders} /> */}
+        {/* <SliderImg sliders={sliders} /> */}
+
         <Regioes />
       </main>
       <Footer />
@@ -64,6 +84,19 @@ export const getStaticProps: GetStaticProps = async () => {
     { orderings: "[document.first_publication_date desc]" }
   );
 
+  const roupasResponse = await prismic.query(
+    [Prismic.Predicates.at("document.type", "roupas")],
+    { orderings: "[document.first_publication_date desc]" }
+  );
+
+  const roupas = roupasResponse.results.map((roupa) => ({
+    id: roupa.uid,
+    name: roupa.data.name,
+    img: roupa.data.img.url,
+    price: roupa.data.preco,
+    oldPrice: roupa.data.precoantigo,
+  }));
+
   const sliders = projectResponse.results.map((slider) => ({
     id: slider.uid,
     titulo: slider.data.titulo,
@@ -78,7 +111,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }));
 
   return {
-    props: { categorias, sliders },
+    props: { categorias, sliders, roupas },
     revalidate: 86400, //conteúdo vai revalidar a cada 24h
   };
 };
