@@ -106,7 +106,7 @@ export const Subtitle = styled.div`
   color: #062631;
   padding: 0.5rem 1.5rem;
 `;
-export const ItemButton = styled.button`
+export const ItemButton = styled.a`
   background-color: #b7081f;
   color: #ffff;
   display: block;

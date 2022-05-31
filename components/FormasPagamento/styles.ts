@@ -3,16 +3,14 @@ import styled from "styled-components";
 export const ContainerFormas = styled.div`
   //background: ${({ theme }) => theme.backgroundDark};
   background-color: #e1e1e1;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4rem;
   padding: 1rem;
-  margin-bottom: 2rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
 `;
 
 export const ContainerTitulo = styled.div`
@@ -36,26 +34,29 @@ export const ContainerCards = styled.div`
 export const Card = styled.div`
   color: ${({ theme }) => theme.textLight};
   //color: black;
-  border-bottom: 2px solid ${({ theme }) => theme.primary};
+  //border-bottom: 2px solid ${({ theme }) => theme.primary};
+  border-bottom: purple;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   //background: rgba(164, 164, 164, 0.1);
-  background-color: black;
+  //background-color: black;
   height: 17rem;
   width: 17rem;
   padding: 3.625rem 2rem;
   padding-right: 3rem;
   padding-left: 3rem;
-  border-radius: 1.5rem;
+  border-radius: 50%;
   text-align: center;
 
+  background: #1a1a1b;
+  /* 
   &:hover {
     background: ${({ theme }) => theme.backgroundDark};
     color: white;
     cursor: pointer;
-  }
+  } */
 `;
 
 export const Titulo = styled.h1`
@@ -70,7 +71,7 @@ export const Titulo = styled.h1`
 `;
 
 export const Subtitle = styled.h3`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
   /* margin-bottom: 0.75rem; */
 `;
@@ -79,5 +80,6 @@ export const IconContainer = styled.div`
   display: block;
   margin-bottom: 1.5rem;
   font-size: 3rem;
-  color: ${({ theme }) => theme.primary};
+  color: #30d5c8;
+  //color: ${({ theme }) => theme.primary};
 `;

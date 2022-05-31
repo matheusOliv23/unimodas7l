@@ -11,6 +11,7 @@ export default function CarouselIndicators({
     <CarouselIndicator>
       {sliders.map((_, index) => (
         <CarouselButtonItem
+          key={index}
           onClick={() => switchIndex(index)}
           isActive={currentIndex === index ? true : false}
         ></CarouselButtonItem>

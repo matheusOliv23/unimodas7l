@@ -31,7 +31,9 @@ export default function CarouselItem({
         <TextContainer>
           <Title>{slider.titulo}</Title>
           <Subtitle>{slider.descricao}</Subtitle>
-          <ItemButton>Confira nossas ofertas</ItemButton>
+          <ItemButton type="button" href="#hero">
+            Confira nossas ofertas
+          </ItemButton>
         </TextContainer>
 
         <img src={slider.img} alt="Imagem" />

@@ -12,20 +12,24 @@ import { Icon } from "@iconify/react";
 
 const services = [
   {
-    icon: <Icon icon="fa-solid:car" />,
+    icon: <Icon icon="emojione-v1:delivery-truck" />,
     titulo: "Entregamos no conforto da sua casa!",
   },
   {
-    icon: <Icon icon="fa-solid:money-check-alt" />,
+    icon: <Icon icon="emojione:money-mouth-face" />,
     titulo: "Temos crediário próprio!",
   },
   {
-    icon: <Icon icon="bi:credit-card-fill" />,
+    icon: <Icon icon="emojione:credit-card" />,
     titulo: "Parcelamos no cartão de crédito",
   },
   {
-    icon: <Icon icon="bi:credit-card-fill" />,
+    icon: <Icon icon="logos:whatsapp" />,
     titulo: "Atendimento via Whatsapp",
+  },
+  {
+    icon: <Icon icon="ic:outline-pix" />,
+    titulo: "Aceitamos PIX!",
   },
 ];
 

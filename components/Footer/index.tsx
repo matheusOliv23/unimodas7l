@@ -66,14 +66,14 @@ function Footer() {
         </FooterRow>
       </ContainerLinks>
 
-      {/* <div style={{ display: "flex", gap: "1rem" }}>
+      <div style={{ display: "flex", gap: "1rem" }}>
         <Titulo>Formas de Pagamento</Titulo>
         <div>
           <Icon icon="logos:visa" width="40" height="40" />
           <Icon icon="logos:mastercard" width="40" height="40" />
           <Icon icon="logos:elo" width="40" height="40" />
         </div>
-      </div> */}
+      </div>
     </ContainerFooter>
   );
 }

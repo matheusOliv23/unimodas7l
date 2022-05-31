@@ -40,7 +40,7 @@ export default function index({ roupas }: ComponentProps) {
   };
   return (
     <Container>
-      <div style={{ color: "black", fontSize: "1.4rem" }}>
+      <div id="hero" style={{ color: "black", fontSize: "1.4rem" }}>
         Veja nossas melhores ofertas aqui
       </div>
       <ContainerProdutos>
