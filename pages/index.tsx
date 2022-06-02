@@ -14,6 +14,8 @@ import FormasPagamento from "../components/FormasPagamento";
 import CarouselImg from "../components/CarouselImg";
 import Hero from "../components/Hero";
 import Novidades from "../components/Novidades";
+import { Icon } from "@iconify/react";
+import Whats from "../components/Whats";
 
 interface ISlider {
   titulo: string;
@@ -25,7 +27,6 @@ interface ICategorias {
   titulo: string;
   img: string;
 }
-
 
 interface IRoupas {
   name: string;
@@ -53,6 +54,9 @@ export default function Home({
     setIsOpen(!isOpen);
   };
 
+  let today = new Date();
+  let year = today.getFullYear();
+
   return (
     <>
       <Navbar handleToggle={handleToggle} />
@@ -68,7 +72,21 @@ export default function Home({
 
         <Regioes />
       </main>
+      <Whats />
+
       <Footer />
+      <div
+        style={{
+          background: "#2C070C",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "2rem",
+        }}
+      >
+        @{year} | Todos os Direitos Reservados
+      </div>
+      <div></div>
     </>
   );
 }

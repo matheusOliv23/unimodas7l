@@ -52,8 +52,8 @@ function Footer() {
 
         <FooterRow>
           <Titulo>Contato</Titulo>
-          <div>unimodas1538@gmail.com</div>
-          <div>(31) 9 9666-2795</div>
+          <span>unimodas1538@gmail.com</span>
+          <span>(31) 9 9666-2795</span>
         </FooterRow>
 
         <FooterRow>
@@ -66,7 +66,14 @@ function Footer() {
         </FooterRow>
       </ContainerLinks>
 
-      <div style={{ display: "flex", gap: "1rem" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1rem",
+        }}
+      >
         <Titulo>Formas de Pagamento</Titulo>
         <div>
           <Icon icon="logos:visa" width="40" height="40" />
