@@ -19,6 +19,8 @@ interface IRoupas {
   img: string;
   price: string;
   oldPrice: string;
+  nParcela: string;
+  valorParcela: string;
 }
 
 interface ComponentProps {
@@ -55,7 +57,8 @@ export default function index({ roupas }: ComponentProps) {
                 <OldPrice>R$ {item.oldPrice}</OldPrice>
                 <Price>Por R$ {item.price}</Price>
                 <Installment>
-                  Até <strong>12x</strong> de <strong>R$ 99,90</strong>
+                  Até <strong>{item.nParcela}x</strong> de{" "}
+                  <strong>R$ {item.valorParcela}</strong>
                 </Installment>
               </Info>
             </Item>

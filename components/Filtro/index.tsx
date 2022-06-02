@@ -1,20 +1,24 @@
 import { useState } from "react";
 import CardProdutos from "../CardProdutos";
+
 import {
   Container,
   Filtro,
   FiltroContainer,
   FiltroTexto,
-  Select,
   Titulo,
+  Select,
   Option,
+  ItensContainer,
 } from "./styles";
 
 interface IRoupas {
   name: string;
   img: string;
-  price: string;
-  oldPrice: string;
+  price?: string;
+  oldPrice?: string;
+  nParcela: string;
+  valorParcela: string;
 }
 
 interface Props {
@@ -28,7 +32,14 @@ export default function FiltroProdutos({ roupas }: Props) {
     if (filterResults === "Roupas") {
       const roupasFiltradas = roupas.map((roupa, index) => (
         <div key={index}>
-          <CardProdutos img={roupa.img} nome={roupa.name} />
+          <CardProdutos
+            oldPrice={roupa.oldPrice}
+            price={roupa.price}
+            img={roupa.img}
+            nome={roupa.name}
+            nParcela={roupa.nParcela}
+            valorParcela={roupa.valorParcela}
+          />
         </div>
       ));
       return roupasFiltradas;
@@ -36,12 +47,19 @@ export default function FiltroProdutos({ roupas }: Props) {
       console.log("amo sapatos");
     }
   }
+
+  const options = [
+    { value: "Roupas", label: "Roupas" },
+    { value: "Sapatos", label: "Sapatos" },
+    { value: "Bolsas", label: "Bolsas" },
+  ];
   return (
     <Container>
-      <Titulo>Amostras de nossos Looks</Titulo>
+      <Titulo>Confira nossos Looks</Titulo>
       <FiltroContainer>
         <Filtro>
           <FiltroTexto>Filtro de Categorias:</FiltroTexto>
+
           <Select
             value={filterResults}
             onChange={(e) => setFilterResults(e.target.value)}
@@ -52,7 +70,7 @@ export default function FiltroProdutos({ roupas }: Props) {
           </Select>
         </Filtro>
       </FiltroContainer>
-      {SearchFilter()}
+      <ItensContainer>{SearchFilter()}</ItensContainer>
     </Container>
   );
 }

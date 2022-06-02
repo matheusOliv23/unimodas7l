@@ -32,6 +32,8 @@ interface IRoupas {
   img: string;
   price: string;
   oldPrice: string;
+  nParcela: string;
+  valorParcela: string;
 }
 
 interface ComponentesProps {
@@ -85,7 +87,7 @@ export const getStaticProps: GetStaticProps = async () => {
   );
 
   const roupasResponse = await prismic.query(
-    [Prismic.Predicates.at("document.type", "roupas")],
+    [Prismic.Predicates.at("document.type", "lancamentos")],
     { orderings: "[document.first_publication_date desc]" }
   );
 
@@ -95,6 +97,8 @@ export const getStaticProps: GetStaticProps = async () => {
     img: roupa.data.img.url,
     price: roupa.data.preco,
     oldPrice: roupa.data.precoantigo,
+    nParcela: roupa.data.nparcela,
+    valorParcela: roupa.data.valorparcela,
   }));
 
   const sliders = projectResponse.results.map((slider) => ({

@@ -1,29 +1,52 @@
 import React from "react";
 import {
-  ContainerCategoria,
-  ContainerProduto,
-  Image,
-  ImgBox,
-  InfoCategorias,
-  Titulo,
-} from "./styles";
+  CarouselImg,
+  Img,
+  Info,
+  Installment,
+  Item,
+  Name,
+  OldPrice,
+  Price,
+} from "../Novidades/styles";
 
 interface ProdutoProps {
   nome: string;
   img: string;
-  preco?: string;
+  oldPrice?: string;
+  price?: string;
+  nParcela: string;
+  valorParcela: string;
 }
 
-export default function CardProdutos({ nome, img, preco }: ProdutoProps) {
+export default function CardProdutos({
+  nome,
+  img,
+  oldPrice,
+  price,
+  nParcela,
+  valorParcela,
+}: ProdutoProps) {
   return (
-    <ContainerCategoria>
-      <ImgBox>
-        <Image src={img} />
-      </ImgBox>
-      <InfoCategorias>
-        <Titulo>{nome}</Titulo>
-        <div>De 20,99 para 80,90</div>
-      </InfoCategorias>
-    </ContainerCategoria>
+    <CarouselImg>
+      <Item>
+        <Img>
+          <img src={img} alt={nome} />
+        </Img>
+        <Info>
+          <Name>{nome}</Name>
+          <OldPrice>R$ {oldPrice}</OldPrice>
+          <Price>Por R$ {price}</Price>
+          {nParcela && oldPrice ? (
+            <Installment>
+              Até <strong>{nParcela}x</strong> de{" "}
+              <strong>R$ {valorParcela}</strong>
+            </Installment>
+          ) : (
+            ""
+          )}
+        </Info>
+      </Item>
+    </CarouselImg>
   );
 }

@@ -23,10 +23,8 @@ export default function produtos({ roupas }) {
 
       <div
         style={{
-          backgroundColor: "#1a1a1b",
+          background: "#e1e1e1",
           padding: "2rem",
-          marginBottom: "3rem",
-          marginTop: "1rem",
         }}
       >
         <FiltroProdutos roupas={roupas} />
@@ -49,6 +47,8 @@ export const getStaticProps: GetStaticProps = async () => {
     img: roupa.data.img.url,
     price: roupa.data.preco,
     oldPrice: roupa.data.precoantigo,
+    nParcela: roupa.data.nparcela,
+    valorParcela: roupa.data.valorparcela,
   }));
 
   return {
