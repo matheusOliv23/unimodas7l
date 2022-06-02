@@ -37,14 +37,11 @@ export default function CardProdutos({
           <Name>{nome}</Name>
           <OldPrice>R$ {oldPrice}</OldPrice>
           <Price>Por R$ {price}</Price>
-          {nParcela && oldPrice ? (
-            <Installment>
-              Até <strong>{nParcela}x</strong> de{" "}
-              <strong>R$ {valorParcela}</strong>
-            </Installment>
-          ) : (
-            ""
-          )}
+
+          <Installment>
+            Até <strong>{nParcela}x</strong> de{" "}
+            <strong>R$ {valorParcela}</strong>
+          </Installment>
         </Info>
       </Item>
     </CarouselImg>
