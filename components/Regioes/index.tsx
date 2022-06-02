@@ -27,9 +27,6 @@ function Regioes() {
     <Container>
       <div>
         <RegioesTitulo>Regiões para entrega</RegioesTitulo>
-        <Subtitle>
-          Se você mora em uma dessas cidades, não perca tempo e encomende já!
-        </Subtitle>
       </div>
 
       <RegioesWraper>

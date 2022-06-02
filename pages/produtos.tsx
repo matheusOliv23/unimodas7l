@@ -5,6 +5,7 @@ import Layout from "../Layout/layout";
 import Prismic from "@prismicio/client";
 import { GetStaticProps } from "next";
 import { getPrismicClient } from "../services/prismic";
+import Whats from "../components/Whats";
 
 interface ProdutosProps {
   roupas: string[];
@@ -20,6 +21,7 @@ export default function produtos({ roupas }) {
   return (
     <Layout handleToggle={handleToggle}>
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
+      <Whats />
 
       <div
         style={{
