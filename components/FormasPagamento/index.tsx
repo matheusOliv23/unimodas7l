@@ -16,10 +16,6 @@ const services = [
     titulo: "Entregamos no conforto da sua casa!",
   },
   {
-    icon: <Icon icon="emojione:money-mouth-face" />,
-    titulo: "Temos crediário próprio!",
-  },
-  {
     icon: <Icon icon="emojione:credit-card" />,
     titulo: "Parcelamos no cartão de crédito",
   },
