@@ -42,9 +42,16 @@ export default function index({ roupas }: ComponentProps) {
   };
   return (
     <Container>
-      <div id="hero" style={{ color: "black", fontSize: "1.4rem" }}>
-        Veja nossas melhores ofertas aqui
+      <div
+        id="hero"
+        style={{ color: "#062631", fontSize: "1.8rem", fontWeight: 500 }}
+      >
+        Confira aqui os nossos destaques da semana
       </div>
+      <span style={{ color: "#062631", fontSize: "1.2rem" }}>
+        <strong>Atenção!</strong> Consulte disponibilidade de tamanhos e cores
+        pelo nosso <strong>canal de atendimento</strong>.
+      </span>
       <ContainerProdutos>
         <CarouselImg ref={carousel}>
           {roupas.map((item, index) => (

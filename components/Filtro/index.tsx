@@ -22,36 +22,124 @@ interface IRoupas {
 }
 
 interface Props {
-  roupas: IRoupas[];
+  vestidos: IRoupas[];
+  blusas: IRoupas[];
+  bolsas: IRoupas[];
+  calcas: IRoupas[];
+  shorts: IRoupas[];
+  conjuntos: IRoupas[];
 }
 
-export default function FiltroProdutos({ roupas }: Props) {
-  const [filterResults, setFilterResults] = useState("Roupas");
+export default function FiltroProdutos({
+  vestidos,
+  blusas,
+  bolsas,
+  calcas,
+  shorts,
+  conjuntos,
+}: Props) {
+  const [filterResults, setFilterResults] = useState("Blusas");
 
+  //console.log(vestidos, blusas, bolsas, calcas, shorts, conjuntos);
   function SearchFilter() {
-    if (filterResults === "Roupas") {
-      const roupasFiltradas = roupas.map((roupa, index) => (
-        <div key={index}>
-          <CardProdutos
-            oldPrice={roupa.oldPrice}
-            price={roupa.price}
-            img={roupa.img}
-            nome={roupa.name}
-            nParcela={roupa.nParcela}
-            valorParcela={roupa.valorParcela}
-          />
-        </div>
-      ));
-      return roupasFiltradas;
-    } else if (filterResults === "Sapatos") {
-      console.log("amo sapatos");
+    switch (filterResults) {
+      case "Blusas":
+        const blusasFiltradas = blusas.map((roupa, index) => (
+          <div key={index}>
+            <CardProdutos
+              oldPrice={roupa.oldPrice}
+              price={roupa.price}
+              img={roupa.img}
+              nome={roupa.name}
+              nParcela={roupa.nParcela}
+              valorParcela={roupa.valorParcela}
+            />
+          </div>
+        ));
+        return blusasFiltradas;
+      case "Bolsas":
+        const bolsasFiltradas = bolsas.map((roupa, index) => (
+          <div key={index}>
+            <CardProdutos
+              oldPrice={roupa.oldPrice}
+              price={roupa.price}
+              img={roupa.img}
+              nome={roupa.name}
+              nParcela={roupa.nParcela}
+              valorParcela={roupa.valorParcela}
+            />
+          </div>
+        ));
+        return bolsasFiltradas;
+      case "Calças":
+        const calcasFiltradas = calcas.map((roupa, index) => (
+          <div key={index}>
+            <CardProdutos
+              oldPrice={roupa.oldPrice}
+              price={roupa.price}
+              img={roupa.img}
+              nome={roupa.name}
+              nParcela={roupa.nParcela}
+              valorParcela={roupa.valorParcela}
+            />
+          </div>
+        ));
+        return calcasFiltradas;
+
+      case "Conjuntos":
+        const conjuntosFiltrados = conjuntos.map((roupa, index) => (
+          <div key={index}>
+            <CardProdutos
+              oldPrice={roupa.oldPrice}
+              price={roupa.price}
+              img={roupa.img}
+              nome={roupa.name}
+              nParcela={roupa.nParcela}
+              valorParcela={roupa.valorParcela}
+            />
+          </div>
+        ));
+        return conjuntosFiltrados;
+      case "Vestidos":
+        const vestidosFiltrados = vestidos.map((roupa, index) => (
+          <div key={index}>
+            <CardProdutos
+              oldPrice={roupa.oldPrice}
+              price={roupa.price}
+              img={roupa.img}
+              nome={roupa.name}
+              nParcela={roupa.nParcela}
+              valorParcela={roupa.valorParcela}
+            />
+          </div>
+        ));
+        return vestidosFiltrados;
+      case "Shorts":
+        const shortsFiltrados = shorts.map((roupa, index) => (
+          <div key={index}>
+            <CardProdutos
+              oldPrice={roupa.oldPrice}
+              price={roupa.price}
+              img={roupa.img}
+              nome={roupa.name}
+              nParcela={roupa.nParcela}
+              valorParcela={roupa.valorParcela}
+            />
+          </div>
+        ));
+        return shortsFiltrados;
+      default:
+        console.log("nada aqui");
     }
   }
 
   const options = [
-    { value: "Roupas", label: "Roupas" },
-    { value: "Sapatos", label: "Sapatos" },
+    { value: "Blusas", label: "Blusas" },
     { value: "Bolsas", label: "Bolsas" },
+    { value: "Calças", label: "Calças" },
+    { value: "Conjuntos", label: "Conjuntos" },
+    { value: "Vestidos", label: "Vestidos" },
+    { value: "Shorts", label: "Shorts" },
   ];
   return (
     <Container>
@@ -64,12 +152,19 @@ export default function FiltroProdutos({ roupas }: Props) {
             value={filterResults}
             onChange={(e) => setFilterResults(e.target.value)}
           >
-            <Option value="Roupas">Roupas</Option>
-            <Option value="Sapatos">Sapatos</Option>
-            <Option value="Bolsas">Bolsas</Option>
+            {options.map((option, index) => (
+              <Option key={index} value={option.value}>
+                {option.label}
+              </Option>
+            ))}
           </Select>
         </Filtro>
       </FiltroContainer>
+
+      <span style={{ color: "#062631", fontSize: "1.2rem" }}>
+        Consulte disponibilidade de tamanhos e cores pelo nosso{" "}
+        <strong>canal de atendimento</strong>.
+      </span>
       <ItensContainer>{SearchFilter()}</ItensContainer>
     </Container>
   );

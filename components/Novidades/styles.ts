@@ -8,6 +8,7 @@ export const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   background-color: #e1e1e1;
+  gap: 1.4rem;
 `;
 
 export const ContainerProdutos = styled.div`
