@@ -29,11 +29,12 @@ export default function CarouselItem({
     <CarouselContent onMouseEnter={stopSlide} onMouseOut={startSlide}>
       <CarouselItemContainer>
         <TextContainer>
-          <Title>{slider.titulo}</Title>
-          <Subtitle>{slider.descricao}</Subtitle>
+          <Title>Ótimas </Title>
+          <Title> ofertas!</Title>
+          {/* <Subtitle>{slider.descricao}</Subtitle>
           <ItemButton type="button" href="#hero">
             Confira nossas ofertas
-          </ItemButton>
+          </ItemButton> */}
         </TextContainer>
 
         <img src={slider.img} alt="Imagem" />

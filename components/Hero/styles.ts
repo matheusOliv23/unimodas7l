@@ -14,6 +14,13 @@ export const Container = styled.section`
   width: 100%;
   height: 100%;
   margin: 0 auto;
+
+  background-image: linear-gradient(90deg, #062631 30px),
+    linear-gradient(90deg, white 30px, #062631 30px);
+  //linear-gradient(90deg, #062631 30px, white 30px);
+  background-position: 0 0, 0 30px, 0 60px;
+  background-repeat: repeat-x;
+  background-size: 60px 30px, 60px 30px, 60px 30px;
 `;
 
 export const Carousel = styled.div`
@@ -33,10 +40,8 @@ export const CarouselContent = styled.div`
   display: inline-block;
   width: 100%;
   margin: 0 auto;
-
   height: 100%;
   padding: 2rem;
-
   img {
     margin: 0 auto;
     max-width: 30rem;
@@ -54,7 +59,7 @@ export const CarouselIndicator = styled.div`
   bottom: 1.5rem;
   z-index: 2;
   padding-bottom: 0.8rem;
-  top: 70%;
+  top: 85%;
 `;
 
 export const CarouselButtonItem = styled.button<CarouselProps>`
@@ -66,7 +71,6 @@ export const CarouselButtonItem = styled.button<CarouselProps>`
   margin: 0.2rem;
   cursor: pointer;
   border-radius: 50%;
-
   padding: 0.1rem;
 `;
 
@@ -77,10 +81,23 @@ export const CarouselItemContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
   margin: 0 auto;
+  min-height: 80vh;
+  padding: 2rem;
 
-  @media (min-width: 1400px) {
-    // margin-left: 10%;
+  @media (min-width: 1500px) {
+    padding-left: 12rem;
+    margin-right: 28rem;
+    border-radius: 8px;
+    width: 1500px;
   }
+
+  &:nth-child(-n + 2) {
+    background: linear-gradient(to right, #7927b2, #fb3182);
+  }
+  &:nth-child(2n) {
+    background-color: yellow;
+  }
+
   @media (min-width: 1200px) {
     flex-direction: row;
   }
@@ -96,10 +113,24 @@ export const TextContainer = styled.div`
 
 export const Title = styled.h1`
   color: #062631;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
+  line-height: 2rem;
   font-family: "Montserrat" sans-serif;
-  font-size: 2.9rem;
+  //font-size: 2.9rem;
   text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 90px;
+  font-weight: bold;
+
+  @media (max-width: 600px) {
+    font-size: 65px;
+  }
+
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  max-width: 480px;
+  height: 100%;
+  text-transform: uppercase;
+  line-height: 0.77;
 `;
 export const Subtitle = styled.div`
   background-color: #979a9a;

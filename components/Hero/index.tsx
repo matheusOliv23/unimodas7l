@@ -65,13 +65,12 @@ export default function index({
 
   useEffect(() => {
     startSlideTimer();
-
     return () => stopSlideTimer();
   }, []);
 
   return (
     <Container>
-      <Carousel style={{ maxWidth: width }}>
+      <Carousel style={{ maxWidth: width, margin: "0 auto" }}>
         <CarouselInner
           style={{ transform: `translateX(${-currentSlide * 100}%)` }}
         >

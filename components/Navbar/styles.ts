@@ -17,8 +17,8 @@ export const Container = styled.nav`
   z-index: 10;
   position: sticky;
 
-  background-color: ${({ theme }) => theme.backgroundDark};
-
+  //background-color: ${({ theme }) => theme.backgroundDark};
+  background-color: #090a0f;
   /* border-bottom: 1px solid ${({ theme }) => theme.border}; */
 
   @media screen and (max-width: 960px) {
