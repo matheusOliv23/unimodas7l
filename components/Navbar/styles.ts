@@ -8,7 +8,7 @@ interface NavlinkProps {
 export const Container = styled.nav`
   width: 100%;
   height: 5rem;
-  /* margin-top: -5rem; */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,6 +23,9 @@ export const Container = styled.nav`
 
   @media screen and (max-width: 960px) {
     transition: 0.5s all ease;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: -9rem;
   }
 `;
 

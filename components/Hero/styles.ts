@@ -6,7 +6,7 @@ interface CarouselProps {
 }
 
 export const Container = styled.section`
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,10 @@ export const CarouselInner = styled.div`
   transition: ease 1s;
 
   @media (min-width: 1400px) {
-    margin-left: 10%;
+    margin-left: -2rem;
+  }
+  @media (min-width: 1800px) {
+    margin-left: -2rem;
   }
 `;
 
@@ -88,7 +91,23 @@ export const CarouselItemContainer = styled.div`
     padding-left: 12rem;
     margin-right: 28rem;
     border-radius: 8px;
-    width: 1500px;
+    width: 1600px;
+  }
+
+  @media (min-width: 1700px) {
+    width: 2000px;
+  }
+
+  @media (min-width: 1800px) {
+    width: 2000px;
+  }
+
+  @media (min-width: 2100px) {
+    width: 2100px;
+  }
+
+  @media (min-width: 2500px) {
+    width: 2500px;
   }
 
   &:nth-child(-n + 2) {
