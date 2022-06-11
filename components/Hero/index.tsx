@@ -21,25 +21,13 @@ interface SliderProps {
 
 export default function index({
   sliders,
-  interval = 5000,
+  interval = 3000,
   indicators = false,
   autoPlay = true,
   width = "100%",
 }: SliderProps) {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const slideInterval = useRef<number | null>(null);
-
-  const prev = () => {
-    startSlideTimer();
-    const index = currentSlide > 0 ? currentSlide - 1 : sliders.length - 1;
-    setCurrentSlide(index);
-  };
-
-  const next = () => {
-    startSlideTimer();
-    const index = currentSlide < sliders.length - 1 ? currentSlide + 1 : 0;
-    setCurrentSlide(index);
-  };
 
   const startSlideTimer = () => {
     if (autoPlay) {
