@@ -81,8 +81,11 @@ export const FooterRow = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  color: black;
   a {
     color: black;
+    &:hover {
+      color: lighten(0.2, #062631);
+      transition: 0.3s ease-in-out;
+    }
   }
 `;

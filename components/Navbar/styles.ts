@@ -7,7 +7,7 @@ interface NavlinkProps {
 
 export const Container = styled.nav`
   width: 100%;
-  height: 5rem;
+  height: 3.8rem;
 
   display: flex;
   align-items: center;
@@ -89,14 +89,15 @@ export const NavlinkContainer = styled.li<NavlinkProps>`
   a {
     text-transform: uppercase;
     text-decoration: none;
-    color: ${({ theme }) => theme.textNavbar};
+    color: ${(props) => (props.isActive ? "#062631" : "white")};
     /* color: ${(props) =>
       props.isActive
         ? props.theme.primary
         : props.theme
             .primary}; //muda a cor do link caso ele esteja ativo ou não */
-    border-bottom: 2px solid
-      ${(props) => (props.isActive ? props.theme.primary : "black")};
+    background: ${(props) => (props.isActive ? " #d0d3d4" : "black")};
+    padding: 1.3rem;
+    font-weight: 600;
 
     &:hover {
       color: ${(props) =>

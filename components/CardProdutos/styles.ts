@@ -23,8 +23,8 @@ export const ContainerProduto = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 14rem;
-  height: 16rem;
+  width: 14rem;
+  height: 10rem;
   border-radius: 2px;
   object-fit: cover;
 `;
