@@ -31,7 +31,7 @@ function Navbar({ handleToggle }: NavbarProps) {
         </MobileIcone>
         <NavMenu>
           <Navlink titulo="Home" rota="/" />
-          <Navlink titulo="Sobre nós" rota="/sobre" />
+          {/* <Navlink titulo="Sobre nós" rota="/sobre" /> */}
           <Navlink titulo="Looks" rota="/produtos" />
         </NavMenu>
       </NavbarContainer>

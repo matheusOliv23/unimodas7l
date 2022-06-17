@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  //background-color: #fb8c00;
-  //padding: 0.3rem;
   border-radius: 50%;
 `;
 
