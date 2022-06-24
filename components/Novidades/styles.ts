@@ -41,9 +41,9 @@ export const Item = styled.div`
 export const Img = styled.div`
   img {
     width: 100%;
-
     object-fit: cover;
-    height: 16rem;
+    height: 20rem;
+    text-align: center;
   }
 `;
 

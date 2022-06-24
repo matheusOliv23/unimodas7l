@@ -37,7 +37,7 @@ export default function CarouselItem({
           </ItemButton> */}
         </TextContainer>
 
-        <img src={slider.img} alt="Imagem" />
+        <img src={slider.img} height="80rem" alt="Imagem" />
       </CarouselItemContainer>
     </CarouselContent>
   );

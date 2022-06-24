@@ -58,11 +58,36 @@ export const CarouselContent = styled.div`
 export const CarouselIndicator = styled.div`
   position: absolute;
   transform: translateX(-50%);
-  left: 50%;
+  right: 35%;
   bottom: 1.5rem;
   z-index: 2;
   padding-bottom: 0.8rem;
-  top: 85%;
+  top: 70%;
+
+  @media (max-width: 500px) {
+    right: 35%;
+    top: 90%;
+  }
+  @media (max-width: 600px) {
+    right: 35%;
+    top: 80%;
+  }
+  @media (max-width: 900px) {
+    right: 40%;
+    top: 90%;
+  }
+  @media (min-width: 1000px) {
+    right: 45%;
+    top: 90%;
+  }
+  @media (min-width: 1200px) {
+    right: 50%;
+    top: 70%;
+  }
+  @media (min-width: 1300px) {
+    right: 50%;
+    top: 70%;
+  }
 `;
 
 export const CarouselButtonItem = styled.button<CarouselProps>`

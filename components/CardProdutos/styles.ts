@@ -7,7 +7,7 @@ export const ContainerProduto = styled.div`
   min-width: 17.5rem;
   height: 21.8rem;
   box-shadow: 5px 5px 5px 5px #f1f1f1;
-  width: 18rem;
+  width: 20rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
